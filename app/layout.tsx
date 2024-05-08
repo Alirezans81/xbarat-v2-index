@@ -6,8 +6,8 @@ import OnLoad from "@/components/common/OnLoad";
 import Loading from "@/components/common/Loading";
 
 export const metadata: Metadata = {
-  title: "Xbarat | When you are enough",
-  description: "Exchange & Transfer platform",
+  title: "Xbarat | Exchange/Transfer your money",
+  description: "Exchange/Transfer platform",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <title>Xbarat | Exchange & Transfer your money</title>
+        <title>Xbarat | Exchange/Transfer your money</title>
       </Head>
       <body>
         <OnLoad />

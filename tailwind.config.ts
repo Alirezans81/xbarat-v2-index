@@ -20,31 +20,32 @@ const config: Config = {
         "blue-gradient-opposite":
           "linear-gradient(157deg, #619AEF 0%, #0A8DFF  100%)",
         gray: "#8F97A6",
+        yellow: "#FCB819",
       },
       screens: {
         xs: "420px",
         // => @media (min-width: 640px) { ... }
-  
+
         sm: "640px",
         // => @media (min-width: 640px) { ... }
-  
+
         md: "768px",
         // => @media (min-width: 768px) { ... }
-        
+
         lg: "1024px",
         // => @media (min-width: 1024px) { ... }
-  
+
         xlg: "1200px",
         // => @media (min-width: 1200px) { ... }
-  
+
         xl: "1280px",
         // => @media (min-width: 1280px) { ... }
-  
+
         "2xl": "1536px",
         // => @media (min-width: 1536px) { ... }
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animation-delay")],
 };
 export default config;
