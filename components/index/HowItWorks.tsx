@@ -13,19 +13,19 @@ export default function HowItWorks(props: PageProps) {
 
   return (
     <section className="w-full flex justify-between items-center">
-      <div className="w-full flex relative my-16">
+      <div className="w-full relative lg:flex hidden">
         <div className="opacity-20 absolute z-[0] w-[60%] h-[60%] rounded-full top-20 left-10 light__gradient" />
         <div className="opacity-65 absolute z-[0] w-[40%] h-[40%] left-28 top-48 blue__gradient" />
 
         <Image
           alt="star"
           src={Star}
-          className="animate-pulse-mine animation-delay hover:animate-none left-[55%] top-[30px] absolute w-[1.75rem] h-[1.75rem] "
+          className="animate-pulse-mine animation-delay hover:animate-none left-[55%] top-[20px] absolute w-[1.75rem] h-[1.75rem] "
         />
         <Image
           alt="star"
           src={Star}
-          className="animate-pulse-mine animation-delay hover:animate-none left-[30%] bottom-[20px] absolute w-[1rem] h-[1rem] "
+          className="animate-pulse-mine animation-delay hover:animate-none left-[30%] bottom-[10px] absolute w-[1rem] h-[1rem] "
         />
         <Image
           alt="star"
@@ -36,16 +36,18 @@ export default function HowItWorks(props: PageProps) {
         <Image
           alt="Demo"
           src={Demo}
-          className="w-[600px] h-[600px] z-[1] object-cover -ml-16"
+          className="w-[500px] h-[500px] z-[1] object-cover"
         />
       </div>
 
       <div
-        className={`w-full flex flex-col gap-y-5 font-${font}-regular mr-12`}
+        className={`w-full flex flex-col items-center lg:items-start text-center lg:text-left gap-y-5 font-${font}-regular lg:mr-12 mt-10 lg:mt-0`}
       >
-        <div className="flex flex-col gap-y-2">
+        <div className="w-full flex flex-col items-center lg:items-start gap-y-2">
           <span className={`text-yellow text-2xl`}>How It Works</span>
-          <span className={`text-${oppositeTheme} text-6xl max-w-[33rem]`}>
+          <span
+            className={`text-${oppositeTheme} text-3xl sm:text-4xl md:text-5xl lg:text-6xl lg:max-w-[33rem]`}
+          >
             Send abroad your money - Using connecting people
           </span>
         </div>

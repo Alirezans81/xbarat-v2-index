@@ -37,13 +37,13 @@ export default function Navbar(
 
   return (
     <section
-      className={`sticky top-0 w-[100dvw] flex items-center justify-center transition-all duration-500 z-50 ${
+      className={`sticky left-0 top-0 w-[100dvw] flex items-center justify-center transition-all duration-500 z-50 ${
         scrollY === 0
           ? "bg-transparent"
           : `bg-${theme}-back shadow-xl shadow-black/5`
       }`}
     >
-      <div className="w-full max-w-[1280px] flex justify-between items-center px-5 xlg:px-0 py-5">
+      <div className="w-full flex justify-between items-center max-w-[1280px] px-[6%] xl:px-0 py-5 ">
         <Link className="flex items-center gap-x-2" href="/">
           <Image src={Logo} className="w-12 h-12" alt="Logo" />
           <div className="flex flex-col -mb-1">
@@ -58,7 +58,7 @@ export default function Navbar(
           </div>
         </Link>
 
-        <div className="flex items-center gap-x-16 -mt-0.5">
+        <div className="items-center gap-x-16 -mt-0.5 lg:flex hidden">
           <div className="flex items-center gap-x-14 -mb-1.5">
             {routes.map((route, index) => (
               <Link

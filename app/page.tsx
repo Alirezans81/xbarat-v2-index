@@ -10,11 +10,14 @@ import {
   useRouteStore,
 } from "@/lib/store";
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
 
 import Logo from "@/public/images/logo.png";
 import Agencies from "@/components/index/Agencies";
 import HowItWorks from "@/components/index/HowItWorks";
+import Features from "@/components/index/Features";
+import SocialMedia from "@/components/index/SocialMedia";
+import Journey from "@/components/index/Journey";
+import Map from "@/components/index/Map";
 
 export default function Page() {
   const lang = useLocaleFileStore((state) => state.localeFile);
@@ -38,7 +41,7 @@ export default function Page() {
         />
 
         <div className="w-full flex justify-center">
-          <div className="max-w-[1280px]">
+          <div className="max-w-[1280px] px-[6%] xl:px-0">
             <Hero
               lang={lang}
               font={font}
@@ -53,9 +56,29 @@ export default function Page() {
           theme={theme as unknown as ThemeState}
         />
 
-        <div className="w-full flex justify-center">
-          <div className="max-w-[1280px]">
+        <div className="w-full flex justify-center overflow-hidden">
+          <div className="max-w-[1280px] px-[6%] xl:px-0 flex flex-col gap-y-20 py-16">
             <HowItWorks
+              lang={lang}
+              font={font}
+              theme={theme as unknown as ThemeState}
+            />
+            <Features
+              lang={lang}
+              font={font}
+              theme={theme as unknown as ThemeState}
+            />
+            <SocialMedia
+              lang={lang}
+              font={font}
+              theme={theme as unknown as ThemeState}
+            />
+            <Journey
+              lang={lang}
+              font={font}
+              theme={theme as unknown as ThemeState}
+            />
+            <Map
               lang={lang}
               font={font}
               theme={theme as unknown as ThemeState}

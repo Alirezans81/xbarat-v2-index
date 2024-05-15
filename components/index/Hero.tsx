@@ -18,11 +18,11 @@ export default function Hero(props: PageProps) {
 
   return (
     <section className="w-full flex justify-between items-center mt-10">
-      <div className="w-full flex flex-col relative gap-y-28">
+      <div className="w-full flex flex-col relative gap-y-10 sm:gap-y-28 mb-10 lg:mb-0">
         <Image
           alt="Arrow"
           src={Arrow}
-          className="z-[2] absolute left-72 top-24 transition-all duration-300 rotate-3 hover:rotate-12"
+          className="z-[2] absolute sm:left-72 sm:top-24 left-44 top-20 transition-all duration-300 rotate-3 hover:rotate-12 w-[150px] sm:w-auto"
         />
         <div className="opacity-70 absolute z-[0] w-[80%] h-[80%] rounded-full top-0 left-0 light__gradient" />
         <div className="opacity-35 absolute z-[0] w-[50%] h-[50%] left-20 top-0 blue__gradient" />
@@ -46,7 +46,7 @@ export default function Hero(props: PageProps) {
           wrapper="span"
           cursor={true}
           repeat={Infinity}
-          className={`z-[1] w-[28rem] text-[400%] h-[11rem] leading-[5rem] flex flex-col text-${oppositeTheme} tracking-wide font-${font}-regular`}
+          className={`z-[1] sm:max-w-[30rem] text-5xl sm:text-7xl h-[11rem] leading-[3.5rem] sm:leading-[5rem] flex flex-col text-${oppositeTheme} tracking-wide font-${font}-regular`}
         />
 
         <div className="flex flex-col gap-y-5 z-[1]">
@@ -60,8 +60,7 @@ export default function Hero(props: PageProps) {
         </div>
       </div>
 
-      <div className="w-full relative z-[1] ml-20">
-
+      <div className="w-full relative z-[1] ml-20 hidden lg:block">
         <Image
           alt="star"
           src={Star}

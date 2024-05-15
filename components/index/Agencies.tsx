@@ -29,7 +29,7 @@ export default function Agencies(props: PageProps) {
 
   return (
     <section
-      className={`z-[2] w-full py-4 flex flex-col gap-y-5 items-center bg-${theme}-back font-${font}-regular relative`}
+      className={`z-[2] w-full py-4 flex flex-col gap-y-5 items-center bg-${theme}-back font-${font}-regular relative animate-swipe-group`}
     >
       <div className="w-full flex flex-row-reverse items-center">
         <div className="flex animate-swipe">

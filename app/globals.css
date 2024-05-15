@@ -15,6 +15,7 @@ body {
   width: 100dvw;
   overflow-x: hidden;
   padding: 0px;
+  scroll-behavior: smooth;
 }
 
 .w-browser {
@@ -564,6 +565,10 @@ body {
   animation-delay: 0.4s !important;
 }
 
+.animation-delay-marker {
+  animation-delay: 0.7s !important;
+}
+
 @keyframes swipe {
   0% {
     transform: translateX(0);
@@ -575,6 +580,9 @@ body {
 .animate-swipe {
   display: flex;
   animation: swipe 25s linear infinite;
+}
+.animate-swipe-group:hover .animate-swipe {
+  animation-play-state: paused ;
 }
 
 .bg-dark-mahtisa {
