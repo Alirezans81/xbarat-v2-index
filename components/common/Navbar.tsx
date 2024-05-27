@@ -4,9 +4,10 @@ import Link from "next/link";
 import { ThemeState } from "@/lib/store";
 import Button from "./Button";
 import { MutableRefObject, useEffect, useState } from "react";
-
+import path from "path";
 import Logo from "@/public/images/logo.png";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { usePathname } from "next/navigation";
 
 export default function Navbar(
   props: PageProps & {
@@ -25,6 +26,8 @@ export default function Navbar(
     setMenuIsOpen,
     navbarDivRef,
   } = props;
+  const pathname = usePathname();
+
   const oppositeTheme: string =
     theme == ("dark" as unknown as ThemeState) ? "light" : "dark";
 
@@ -50,7 +53,7 @@ export default function Navbar(
     <div
       className={`sticky left-0 top-0 w-[100dvw] flex items-center justify-center transition-all duration-500 z-50 ${
         scrollY === 0
-          ? "bg-transparent"
+          ? `bg-${theme}`
           : `bg-${theme}-back shadow-xl shadow-black/5`
       }`}
     >
@@ -66,7 +69,9 @@ export default function Navbar(
             alt="Logo"
           />
           <div
-            className={`flex flex-col ${font === "Fa" ? "gap-y-0.5" : "-mb-1"} `}
+            className={`flex flex-col ${
+              font === "Fa" ? "gap-y-0.5" : "-mb-1"
+            } `}
           >
             <span
               className={`w-fit text-yellow-gradient font-${font}-bold text-2xl sm:text-3xl`}
@@ -110,7 +115,7 @@ export default function Navbar(
               <Link
                 key={index}
                 className={`${
-                  activeRoute === route.route
+                  pathname === route.route
                     ? `text-${oppositeTheme} border-b-blue-growing-active`
                     : `text-gray border-b-blue-growing`
                 } transition-all border-b-blue-growing duration-300 font-${font}-regular text-lg`}
