@@ -14,7 +14,7 @@ export default function Button(props: PageProps) {
   return (
     <Link
       href="https://app.xbarat.pro"
-      className={`flex justify-center items-center rounded-lg px-5 py-[12.5px] font-${font}-regular relative`}
+      className={`flex justify-center items-center rounded-lg px-5 py-[12.5px] font-${font}-regular relative px-7 w-fit`}
       onMouseOver={() => {
         setBgGradient("opacity-0");
         setBgGradientOpposite("opacity-100");
@@ -30,7 +30,9 @@ export default function Button(props: PageProps) {
       <div
         className={`transition-all duration-300 rounded-lg absolute w-full h-full bg-blue-gradient-opposite ${bgGradientOppositeClass}`}
       />
-      <span className="text-light z-10 -mb-1.5">Go To Platform</span>
+      <span className={`text-light z-10 ${font === "Fa" ? "" : "-mb-1.5"}`}>
+        {lang["index-go-to-platform-button"]}
+      </span>
     </Link>
   );
 }

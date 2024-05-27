@@ -8,6 +8,7 @@ import {
   useLocaleFileStore,
   useThemeStore,
   useRouteStore,
+  useLoadingStore,
 } from "@/lib/store";
 import Image from "next/image";
 
@@ -17,73 +18,124 @@ import HowItWorks from "@/components/index/HowItWorks";
 import Features from "@/components/index/Features";
 import SocialMedia from "@/components/index/SocialMedia";
 import Journey from "@/components/index/Journey";
-import Map from "@/components/index/Map";
+import SupportMap from "@/components/index/SupportMap";
+import Footer from "@/components/index/Footer";
+import {
+  LegacyRef,
+  MutableRefObject,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+import SlideMenu from "@/components/common/SlideMenu";
 
 export default function Page() {
   const lang = useLocaleFileStore((state) => state.localeFile);
   const theme = useThemeStore((state) => state.theme);
   const font = useFontStore((state) => state.font);
+  const isLoading = useLoadingStore((state) => state.isLoading);
   const routes = useRouteStore((state) => state.routes);
+  const setRoutes = useRouteStore((state) => state.setRoutes);
   const activeRoute = useRouteStore((state) => state.activeRoute);
+  const setActiveRoute = useRouteStore((state) => state.setActiveRoute);
+
+  const navbarDivRef: MutableRefObject<HTMLDivElement | undefined> = useRef();
 
   const oppositeTheme: string =
     theme === ("dark" as unknown as ThemeState) ? "light" : "dark";
 
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+  useEffect(() => {
+    setRoutes([
+      {
+        id: "",
+        title: lang["home"],
+        route: "/",
+      },
+      {
+        id: "",
+        title: lang["index-privacy-&-policy"],
+        route: "/privacy-&-policy",
+      },
+    ]);
+    setActiveRoute("/");
+  }, [lang]);
+
   if (lang && font && theme && routes && activeRoute) {
     return (
-      <div className={`w-[100dvw] min-h-[100dvh] bg-${theme}`}>
-        <Navbar
-          lang={lang}
-          font={font}
-          theme={theme as unknown as ThemeState}
-          routes={routes}
-          activeRoute={activeRoute}
-        />
+      <div id="outer-container">
+        <SlideMenu isOpen={menuIsOpen} onClose={() => setMenuIsOpen(false)} />
 
-        <div className="w-full flex justify-center">
-          <div className="max-w-[1280px] px-[6%] xl:px-0">
-            <Hero
-              lang={lang}
-              font={font}
-              theme={theme as unknown as ThemeState}
-            />
+        <div
+          dir={font === "Fa" ? "rtl" : "ltr"}
+          id="page-wrap"
+          ref={navbarDivRef as LegacyRef<HTMLDivElement>}
+          className={`w-[100dvw] h-[100dvh] bg-${theme} ${
+            isLoading ? "overflow-hidden" : "overflow-y-auto overflow-x-hidden"
+          }`}
+        >
+          <Navbar
+            lang={lang}
+            font={font}
+            theme={theme as unknown as ThemeState}
+            routes={routes}
+            activeRoute={activeRoute}
+            setMenuIsOpen={setMenuIsOpen}
+            navbarDivRef={navbarDivRef}
+          />
+
+          <div className="w-full flex justify-center">
+            <div className="max-w-[1280px] px-[7%] xl:px-0">
+              <Hero
+                lang={lang}
+                font={font}
+                theme={theme as unknown as ThemeState}
+              />
+            </div>
           </div>
-        </div>
 
-        <Agencies
-          lang={lang}
-          font={font}
-          theme={theme as unknown as ThemeState}
-        />
+          <Agencies
+            lang={lang}
+            font={font}
+            theme={theme as unknown as ThemeState}
+          />
 
-        <div className="w-full flex justify-center overflow-hidden">
-          <div className="max-w-[1280px] px-[6%] xl:px-0 flex flex-col gap-y-20 py-16">
-            <HowItWorks
-              lang={lang}
-              font={font}
-              theme={theme as unknown as ThemeState}
-            />
-            <Features
-              lang={lang}
-              font={font}
-              theme={theme as unknown as ThemeState}
-            />
-            <SocialMedia
-              lang={lang}
-              font={font}
-              theme={theme as unknown as ThemeState}
-            />
-            <Journey
-              lang={lang}
-              font={font}
-              theme={theme as unknown as ThemeState}
-            />
-            <Map
-              lang={lang}
-              font={font}
-              theme={theme as unknown as ThemeState}
-            />
+          <div className={`w-full flex justify-center overflow-hidden`}>
+            <div className="max-w-[1280px] px-[7%] xl:px-0 flex flex-col gap-y-20 py-16">
+              <HowItWorks
+                lang={lang}
+                font={font}
+                theme={theme as unknown as ThemeState}
+              />
+              <Features
+                lang={lang}
+                font={font}
+                theme={theme as unknown as ThemeState}
+              />
+              <SocialMedia
+                lang={lang}
+                font={font}
+                theme={theme as unknown as ThemeState}
+              />
+              <Journey
+                lang={lang}
+                font={font}
+                theme={theme as unknown as ThemeState}
+              />
+              <SupportMap
+                lang={lang}
+                font={font}
+                theme={theme as unknown as ThemeState}
+              />
+            </div>
           </div>
+
+          <Footer
+            lang={lang}
+            font={font}
+            theme={theme as unknown as ThemeState}
+          />
         </div>
       </div>
     );

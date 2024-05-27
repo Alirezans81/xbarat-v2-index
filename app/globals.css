@@ -112,13 +112,11 @@ body {
   font-family: ModamFaNum-bold;
   direction: ltr;
   text-align: left;
-  padding-bottom: 3px;
 }
 .font-Fa-regular {
   font-family: ModamFaNum-regular;
   direction: ltr;
   text-align: left;
-  padding-bottom: 3px;
 }
 .font-Fa-thin {
   font-family: ModamFaNum-thin;
@@ -198,6 +196,9 @@ body {
 }
 
 .text-dark {
+  color: #171d20;
+}
+.text-hover-dark:hover {
   color: #171d20;
 }
 
@@ -582,7 +583,7 @@ body {
   animation: swipe 25s linear infinite;
 }
 .animate-swipe-group:hover .animate-swipe {
-  animation-play-state: paused ;
+  animation-play-state: paused;
 }
 
 .bg-dark-mahtisa {

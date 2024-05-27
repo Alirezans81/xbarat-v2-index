@@ -120,22 +120,17 @@ export type RouteState = {
   activeRoute: string;
 };
 export type RouteActions = {
+  setRoutes: (newState: any[]) => void;
   setActiveRoute: (newState: string) => void;
 };
 export const useRouteStore = create<RouteState & RouteActions>((set) => ({
-  routes: [
-    {
-      id: "",
-      title: "Home",
-      route: "/",
-    },
-    {
-      id: "",
-      title: "About",
-      route: "/about",
-    },
-  ],
-  activeRoute: "/",
+  routes: [],
+  activeRoute: "",
+  setRoutes: (newState: any[]) => {
+    set((state) => ({
+      routes: newState,
+    }));
+  },
   setActiveRoute: (newState: string) =>
     set((state) => ({
       activeRoute: newState,

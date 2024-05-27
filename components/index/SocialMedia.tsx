@@ -14,23 +14,23 @@ export default function SocialMedia(props: PageProps) {
   const socialMediaFeatures = [
     {
       icon: require("@/public/images/index/Agencies/pin.png"),
-      title: "budgeting intervals",
-      desc: "Lorem ipsum dolor sit amet. Qui consequatur sint 33 voluptatem officia et sint laboriosam sed ipsa sint ut voluptatum labore et.",
+      title: lang["index-social-media-desc-1-title"],
+      desc: lang["index-social-media-desc-1-desc"],
     },
     {
       icon: require("@/public/images/index/Agencies/pin.png"),
-      title: "budgeting intervals",
-      desc: "Lorem ipsum dolor sit amet. Qui consequatur sint 33 voluptatem officia et sint laboriosam sed ipsa sint ut voluptatum labore et.",
+      title: lang["index-social-media-desc-2-title"],
+      desc: lang["index-social-media-desc-2-desc"],
     },
     {
       icon: require("@/public/images/index/Agencies/pin.png"),
-      title: "budgeting intervals",
-      desc: "Lorem ipsum dolor sit amet. Qui consequatur sint 33 voluptatem officia et sint laboriosam sed ipsa sint ut voluptatum labore et.",
+      title: lang["index-social-media-desc-3-title"],
+      desc: lang["index-social-media-desc-3-desc"],
     },
   ];
 
   return (
-    <section className="w-full flex items-center">
+    <section id="social-media" className="w-full flex items-center">
       <div className="w-full lg:block hidden">
         <div className="relative w-[500px] h-[500px]">
           <div className="opacity-20 absolute z-[0] w-[60%] h-[60%] rounded-full top-20 left-10 light__gradient" />
@@ -67,15 +67,16 @@ export default function SocialMedia(props: PageProps) {
 
       <div
         className={`w-full flex flex-col gap-y-5 font-${font}-regular ml-0 lg:ml-20`}
+        style={{ direction: font === "Fa" ? "rtl" : "ltr", textAlign: "start" }}
       >
         <div className="flex flex-col items-center lg:items-start gap-y-2">
           <span className={`text-yellow text-xl lg:text-2xl`}>
-            Social Media
+            {lang["index-social-media"]}
           </span>
           <span
-            className={`text-${oppositeTheme} text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-[33rem]`}
+            className={`text-${oppositeTheme} text-3xl sm:text-4xl md:text-5xl lg:text-6xl `}
           >
-            Crypto premium
+            {lang["index-social-media-title"]}
           </span>
         </div>
 
@@ -84,6 +85,10 @@ export default function SocialMedia(props: PageProps) {
             <div
               key={index}
               className="flex flex-col items-center md:items-start gap-y-3"
+              style={{
+                direction: font === "Fa" ? "rtl" : "ltr",
+                textAlign: "start",
+              }}
             >
               <div className="flex flex-row gap-x-2 items-center">
                 <Image
@@ -91,7 +96,7 @@ export default function SocialMedia(props: PageProps) {
                   src={feature.icon}
                   className="w-5 h-5"
                 />
-                <span className={`text-${oppositeTheme} text-lg -mb-1`}>
+                <span className={`text-${oppositeTheme} text-lg ${font === "Fa" ? "" : "-mb-1"}`}>
                   {feature.title}
                 </span>
               </div>

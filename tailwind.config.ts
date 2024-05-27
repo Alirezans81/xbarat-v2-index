@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        dark: "#2A2B2E",
+        dark: "#171d20",
         "dark-back": "#152831",
         light: "#FFFFFF",
         "light-back": "#EEEEEE",
@@ -46,6 +46,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animation-delay")],
+  plugins: [],
 };
 export default config;

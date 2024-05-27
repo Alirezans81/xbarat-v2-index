@@ -5,7 +5,8 @@ import { TypeAnimation } from "react-type-animation";
 
 import Star from "@/public/images/common/star.png";
 import HeroPhoto from "@/public/images/index/Hero/hero.png";
-import Arrow from "@/public/images/index/Hero/arrow.png";
+import ArrowRight from "@/public/images/index/Hero/arrowRight.png";
+import ArrowLeft from "@/public/images/index/Hero/arrowLeft.png";
 import Button from "../common/Button";
 
 export default function Hero(props: PageProps) {
@@ -21,21 +22,24 @@ export default function Hero(props: PageProps) {
       <div className="w-full flex flex-col relative gap-y-10 sm:gap-y-28 mb-10 lg:mb-0">
         <Image
           alt="Arrow"
-          src={Arrow}
-          className="z-[2] absolute sm:left-72 sm:top-24 left-44 top-20 transition-all duration-300 rotate-3 hover:rotate-12 w-[150px] sm:w-auto"
+          src={font === "Fa" ? ArrowRight : ArrowLeft}
+          className={`z-[2] absolute sm:top-24 transition-all duration-300
+          rtl:-rotate-3 rtl:hover:-rotate-12 rtl:sm:left-36 rtl:left-5 rtl:sm:top-28 rtl:top-20
+          rotate-3 hover:rotate-12 sm:left-72 left-44 top-20
+          w-[150px] sm:w-auto`}
         />
         <div className="opacity-70 absolute z-[0] w-[80%] h-[80%] rounded-full top-0 left-0 light__gradient" />
         <div className="opacity-35 absolute z-[0] w-[50%] h-[50%] left-20 top-0 blue__gradient" />
 
         <TypeAnimation
           sequence={[
-            "When you are enough.", // Types 'One'
+            lang["slogan"] + ".", // Types 'One'
             showTypingAnimtionDuration,
             () => {},
-            "When you are enough..", // Types 'One'
+            lang["slogan"] + "..", // Types 'Two'
             showTypingAnimtionDuration,
             () => {},
-            "When you are enough...", // Types 'One'
+            lang["slogan"] + "...", // Types 'Three'
             showTypingAnimtionDuration,
             () => {},
             "", // Types 'One'
@@ -43,20 +47,27 @@ export default function Hero(props: PageProps) {
             () => {},
           ]}
           speed={50}
-          wrapper="span"
+          wrapper="h2"
           cursor={true}
           repeat={Infinity}
-          className={`z-[1] sm:max-w-[30rem] text-5xl sm:text-7xl h-[11rem] leading-[3.5rem] sm:leading-[5rem] flex flex-col text-${oppositeTheme} tracking-wide font-${font}-regular`}
+          style={{
+            textAlign: "start",
+            direction: font === "Fa" ? "rtl" : "ltr",
+          }}
+          className={`z-[1] sm:max-w-[30rem] rtl:sm:max-w-[32rem] text-5xl sm:text-7xl h-[11rem] leading-[3.5rem] sm:leading-[5rem] flex flex-col text-${oppositeTheme} font-${font}-regular`}
         />
 
         <div className="flex flex-col gap-y-5 z-[1]">
-          <span className={`text-gray font-${font}-regular text-lg`}>
-            A peer to peer exchange & transfer national currencies platform. We
-            connect people, not Intermediation.
+          <span
+            className={`text-gray font-${font}-regular text-lg`}
+            style={{
+              textAlign: "start",
+              direction: font === "Fa" ? "rtl" : "ltr",
+            }}
+          >
+            {lang["index-xbarat-desc"]}
           </span>
-          <div className="w-40">
-            <Button font={font} lang={lang} theme={theme} />
-          </div>
+          <Button font={font} lang={lang} theme={theme} />
         </div>
       </div>
 

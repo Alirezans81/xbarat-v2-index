@@ -1,7 +1,6 @@
 import { PageProps } from "@/interfaces/PageProps";
 import { ThemeState } from "@/lib/store";
 import Image from "next/image";
-import { title } from "process";
 
 export default function Journey(props: PageProps) {
   const { font, lang, theme } = props;
@@ -11,42 +10,41 @@ export default function Journey(props: PageProps) {
   const steps = [
     {
       icon: require("@/public/images/index/Journey/step1.png"),
-      title: "Sign up & Complete profile",
-      desc: "You must sign up & complete your profile first. information such as name  & phone & nationality & country & city & identity document.",
+      title: lang['index-journey-step-1-title'],
+      desc: lang['index-journey-step-1-desc'],
     },
     {
       icon: require("@/public/images/index/Journey/step1.png"),
-      title: "Sign up & Complete profile",
-      desc: "You must sign up & complete your profile first. information such as name  & phone & nationality & country & city & identity document.",
+      title: lang['index-journey-step-2-title'],
+      desc: lang['index-journey-step-2-desc'],
     },
     {
       icon: require("@/public/images/index/Journey/step1.png"),
-      title: "Sign up & Complete profile",
-      desc: "You must sign up & complete your profile first. information such as name  & phone & nationality & country & city & identity document.",
+      title: lang['index-journey-step-3-title'],
+      desc: lang['index-journey-step-3-desc'],
     },
     {
       icon: require("@/public/images/index/Journey/step1.png"),
-      title: "Sign up & Complete profile",
-      desc: "You must sign up & complete your profile first. information such as name  & phone & nationality & country & city & identity document.",
+      title: lang['index-journey-step-4-title'],
+      desc: lang['index-journey-step-4-desc'],
     },
   ];
 
   return (
     <section
+      id="journey"
       className={`w-full flex flex-col items-center gap-y-10 font-${font}-regular`}
+      style={{ direction: font === "Fa" ? "rtl" : "ltr", textAlign: "start" }}
     >
       <div className="w-full flex flex-col items-center gap-y-4 text-center">
         <span
           className={`text-${oppositeTheme} text-3xl sm:text-4xl md:text-5xl lg:text-6xl`}
         >
-          The journey of transfering your money
+          {lang["index-journey-title"]}
         </span>
         <div className="flex flex-col items-center text-gray text-xl">
-          <span>We transfer your money in 4 steps</span>
-          <span>
-            Signup & Complete Profile - Deposit - Exchange - Withdraw or
-            Transfer
-          </span>
+          <span>{lang["index-journey-desc-1"]}</span>
+          <span>{lang["index-journey-desc-2"]}</span>
         </div>
       </div>
 
@@ -57,7 +55,11 @@ export default function Journey(props: PageProps) {
             className={`col-span-1 h-full text-center flex flex-col items-center gap-y-3 border border-blue rounded-xl p-7`}
           >
             <span
-              className={`text-${oppositeTheme} w-full text-left text-xl font-${font}-bold`}
+              className={`text-${oppositeTheme} w-full text-xl font-${font}-bold`}
+              style={{
+                direction: font === "Fa" ? "rtl" : "ltr",
+                textAlign: "start",
+              }}
             >
               {"0" + (index + 1)}
             </span>
