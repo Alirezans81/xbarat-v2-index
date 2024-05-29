@@ -17,12 +17,12 @@ export default function PrivacyContext(props: PageProps) {
 
         <div className="w-full h-full grid grid-cols-12 grid-rows-4 bg-transparent gap-y-5 z-[1] gap-x-5">
           <div className="row-span-4 col-span-4  flex flex-col gap-y-10 bg-dark p-5 rounded-xl">
-            <div className="bg-dark-back w-full h-full flex flex-col gap-y-10 rounded-xl p-5 justify-start">
+            <div className="bg-dark-back w-full h-full flex flex-col gap-y-10 rounded-xl p-5 justify-start border-2 border-solid border-light">
               <button
                 className={
                   info === "Why"
-                    ? `text-dark p-5 rounded-xl text-center text-2xl bg-light w-fit  transition-all duration-500`
-                    : "text-light text-center text-2xl w-fit p-5  transition-all duration-500"
+                    ? `text-dark p-5 rounded-xl text-center text-lg bg-light w-fit  transition-all duration-500`
+                    : "text-light text-center text-lg w-fit p-5  transition-all duration-500"
                 }
                 onClick={() => setInfo("Why")}
               >
@@ -31,8 +31,8 @@ export default function PrivacyContext(props: PageProps) {
               <button
                 className={
                   info === "How"
-                    ? `text-dark p-5 rounded-xl text-center text-2xl bg-light w-fit  transition-all duration-500`
-                    : "text-light text-center text-2xl w-fit p-5  transition-all duration-500"
+                    ? `text-dark p-5 rounded-xl text-center text-lg bg-light w-fit  transition-all duration-500`
+                    : "text-light text-center text-lg w-fit p-5  transition-all duration-500"
                 }
                 onClick={() => setInfo("How")}
               >
@@ -41,12 +41,22 @@ export default function PrivacyContext(props: PageProps) {
               <button
                 className={
                   info === "What"
-                    ? `text-dark p-5 rounded-xl text-center text-2xl bg-light w-fit  transition-all duration-500`
-                    : "text-light text-center text-2xl w-fit p-5  transition-all duration-500"
+                    ? `text-dark p-5 rounded-xl text-center text-lg bg-light w-fit  transition-all duration-500`
+                    : "text-light text-center text-lg w-fit p-5  transition-all duration-500"
                 }
                 onClick={() => setInfo("What")}
               >
                 What Data We Collect
+              </button>
+              <button
+                className={
+                  info === "Legal"
+                    ? `text-dark p-5 rounded-xl text-center text-lg bg-light w-fit  transition-all duration-500`
+                    : "text-light text-center text-lg w-fit p-5  transition-all duration-500"
+                }
+                onClick={() => setInfo("Legal")}
+              >
+                Legal Informatioin
               </button>
             </div>
           </div>
