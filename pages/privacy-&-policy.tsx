@@ -52,44 +52,51 @@ export default function PrivacyPolicy() {
   }, [lang]);
   if (lang && font && theme && routes && activeRoute) {
     return (
-      <div
-        className={`absolute w-100vw h-100vh bg-${theme} overflow-scroll flex flex-col`}
-      >
+      <div className={`absolute w-100vw h-100vh bg-${theme} flex flex-col`}>
         <SlideMenu isOpen={menuIsOpen} onClose={() => setMenuIsOpen(false)} />
-        <Navbar
-          lang={lang}
-          font={font}
-          theme={theme as unknown as ThemeState}
-          routes={routes}
-          activeRoute={activeRoute}
-          setMenuIsOpen={setMenuIsOpen}
-          navbarDivRef={navbarDivRef}
-        />
-        <div className="w-full flex justify-center ">
-          <div className="max-w-[1280px] px-[7%] xl:px-0">
-            <LandingPrivacy
-              lang={lang}
-              font={font}
-              theme={theme as unknown as ThemeState}
-            />
+        <div
+          dir={font === "Fa" ? "rtl" : "ltr"}
+          id="page-wrap"
+          ref={navbarDivRef as LegacyRef<HTMLDivElement>}
+          className={`w-[100dvw] h-[100dvh] bg-${theme} ${
+            isLoading ? "overflow-hidden" : "overflow-y-auto overflow-x-hidden"
+          }`}
+        >
+          <Navbar
+            lang={lang}
+            font={font}
+            theme={theme as unknown as ThemeState}
+            routes={routes}
+            activeRoute={activeRoute}
+            setMenuIsOpen={setMenuIsOpen}
+            navbarDivRef={navbarDivRef}
+          />
+          <div className="w-full flex justify-center ">
+            <div className="max-w-[1280px] px-[7%] xl:px-0">
+              <LandingPrivacy
+                lang={lang}
+                font={font}
+                theme={theme as unknown as ThemeState}
+              />
+            </div>
           </div>
-        </div>
-        <div className="w-full flex justify-center ">
-          <div className="max-w-[1280px] px-[7%] xl:px-0 ">
-            <InfoWeCollect
-              lang={lang}
-              font={font}
-              theme={theme as unknown as ThemeState}
-            />
+          <div className="w-full flex justify-center ">
+            <div className="max-w-[1280px] px-[7%] xl:px-0 ">
+              <InfoWeCollect
+                lang={lang}
+                font={font}
+                theme={theme as unknown as ThemeState}
+              />
+            </div>
           </div>
-        </div>
-        <div className="w-full flex justify-center ">
-          <div className="max-w-[1280px] px-[7%] xl:px-0 ">
-            <WhyWeCollect
-              lang={lang}
-              font={font}
-              theme={theme as unknown as ThemeState}
-            />
+          <div className="w-full flex justify-center ">
+            <div className="max-w-[1280px] px-[7%] xl:px-0 ">
+              <WhyWeCollect
+                lang={lang}
+                font={font}
+                theme={theme as unknown as ThemeState}
+              />
+            </div>
           </div>
         </div>
       </div>

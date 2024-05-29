@@ -27,8 +27,8 @@ export default function LandingPrivacy(props: PageProps) {
           rotate-3 hover:rotate-12 sm:left-72 left-44 top-20
           w-[150px] sm:w-auto`}
         />
-        <div className="opacity-70 absolute z-[0] w-[80%] h-[80%] rounded-full top-0 left-0 light__gradient" />
-        <div className="opacity-35 absolute z-[0] w-[50%] h-[50%] left-20 top-0 blue__gradient" />
+        <div className="opacity-20 absolute z-[0] w-[60%] h-[60%] rounded-full top-20 left-10 rtl:right-10 light__gradient" />
+        <div className="opacity-65 absolute z-[0] w-[40%] h-[40%] left-28 rtl:right-28 top-48 blue__gradient" />
 
         <TypeAnimation
           sequence={[
