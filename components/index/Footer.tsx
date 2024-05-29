@@ -38,7 +38,7 @@ export default function Footer(props: PageProps) {
           className={`col-span-12 sm:col-span-7 md:col-span-3 w-full bg-${theme}-mahtisa rounded-xl p-5 flex md:hidden xl:flex flex-col gap-y-5 md:gap-y-2`}
         >
           <span
-            className={`text-${oppositeTheme} text-2xl md:text-3xl sm:max-w-40 md:max-w-48 leading-8 font-${font}-bold`}
+            className={`text-${oppositeTheme} text-xl md:text-2xl leading-8 font-${font}-bold`}
             style={{
               direction: font === "Fa" ? "rtl" : "ltr",
               textAlign: "start",
@@ -51,12 +51,11 @@ export default function Footer(props: PageProps) {
             {lang["index-footer-trust-title-3"]}
           </span>
           <span className={`flex-1 text-gray`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+            {lang["index-footer-trust-desc"]}
           </span>
-          <span className={`text-${oppositeTheme} -mb-2`}>
-            sgknsdfhsfn dsaignesogn
-          </span>
+          {/* <span className={`text-${oppositeTheme} -mb-2`}>
+            {lang["index-footer-trust-bottom"]}
+          </span> */}
         </div>
 
         <div
@@ -69,38 +68,38 @@ export default function Footer(props: PageProps) {
               textAlign: "start",
             }}
           >
-            Product
+            {lang["index-product"]}
           </span>
           <div className="flex flex-col gap-y-1.5">
             <Link
               href={"/#how-it-works"}
               className={`transition-all duration-300 text-hover-${oppositeTheme}`}
             >
-              How it works
+              {lang["index-how-it-works"]}
             </Link>
             <Link
               href={"/#features"}
               className={`transition-all duration-300 text-hover-${oppositeTheme}`}
             >
-              Features
+              {lang["index-features"]}
             </Link>
             <Link
               href={"/#social-media"}
               className={`transition-all duration-300 text-hover-${oppositeTheme}`}
             >
-              Social Media
+              {lang["index-social-media"]}
             </Link>
             <Link
               href={"/#journey"}
               className={`transition-all duration-300 text-hover-${oppositeTheme}`}
             >
-              Journey
+              {lang["index-journey"]}
             </Link>
             <Link
               href={"/#support-map"}
               className={`transition-all duration-300 text-hover-${oppositeTheme}`}
             >
-              Support Map
+              {lang["index-support-map"]}
             </Link>
           </div>
         </div>
@@ -115,14 +114,14 @@ export default function Footer(props: PageProps) {
               textAlign: "start",
             }}
           >
-            Trust
+            {lang["index-trust"]}
           </span>
           <div className="flex flex-col gap-y-1.5">
             <Link
               href={"/#how-it-works"}
               className={`transition-all duration-300 text-hover-${oppositeTheme}`}
             >
-              Privacy & Policy
+              {lang["index-privacy-&-policy"]}
             </Link>
           </div>
         </div>
@@ -138,7 +137,7 @@ export default function Footer(props: PageProps) {
                 textAlign: "start",
               }}
             >
-              Social Links
+              {lang["index-social-links"]}
             </span>
             <div className="flex items-center gap-x-2"></div>
           </div>
@@ -172,7 +171,7 @@ export default function Footer(props: PageProps) {
         </Link>
 
         <span className="col-span-12 text-center text-gray">
-          Copyright by @alirezanasiri.pro
+          {lang['index-copyright']}
         </span>
       </div>
     </footer>
