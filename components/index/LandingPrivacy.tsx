@@ -7,7 +7,7 @@ import Star from "@/public/images/common/star.png";
 import ArrowRight from "@/public/images/index/Hero/arrowRight.png";
 import ArrowLeft from "@/public/images/index/Hero/arrowLeft.png";
 import Button from "../common/Button";
-import PrivacLandingPhoto from "@/public/images/index/Privacy/PrivacyLanding.png";
+import PrivacLandingPhoto from "@/public/images/index/Privacy/PrivacyLand.png";
 export default function LandingPrivacy(props: PageProps) {
   const { theme, font, lang } = props;
   const oppositeTheme: string =
@@ -68,7 +68,6 @@ export default function LandingPrivacy(props: PageProps) {
             ensuring the security of your personal information. This Privacy
             Policy explains how we collect, use, and share your data.
           </span>
-          <Button font={font} lang={lang} theme={theme} />
         </div>
       </div>
       <div className="w-full relative z-[1] ml-20 hidden lg:block">

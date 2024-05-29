@@ -11,7 +11,7 @@ import {
   useLoadingStore,
 } from "@/lib/store";
 import Image from "next/image";
-
+import PrivacyContext from "@/components/index/PrivacyContext";
 import Logo from "@/public/images/logo.png";
 import { MutableRefObject, useEffect, useRef, useState } from "react";
 import SlideMenu from "@/components/common/SlideMenu";
@@ -81,6 +81,15 @@ export default function PrivacyPolicy() {
             </div>
           </div>
           <div className="w-full flex justify-center ">
+            <div className="max-w-[1280px] px-[7%] xl:px-0">
+              <PrivacyContext
+                lang={lang}
+                font={font}
+                theme={theme as unknown as ThemeState}
+              />
+            </div>
+          </div>
+          {/* <div className="w-full flex justify-center ">
             <div className="max-w-[1280px] px-[7%] xl:px-0 ">
               <InfoWeCollect
                 lang={lang}
@@ -97,7 +106,7 @@ export default function PrivacyPolicy() {
                 theme={theme as unknown as ThemeState}
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     );
