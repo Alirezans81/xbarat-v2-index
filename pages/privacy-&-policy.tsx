@@ -81,7 +81,7 @@ export default function PrivacyPolicy() {
             </div>
           </div>
           <div className="w-full flex justify-center ">
-            <div className="max-w-[1280px] px-[7%] xl:px-0">
+            <div className="max-w-[1280px] px-[7%] xl:px-0 pb-20">
               <PrivacyContext
                 lang={lang}
                 font={font}

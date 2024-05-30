@@ -18,15 +18,15 @@ export default function PrivacyContext(props: PageProps) {
         <div className="opacity-20 absolute z-[0] w-[60%] h-[60%] rounded-full top-20 left-10 rtl:right-10 light__gradient" />
         <div className="opacity-65 absolute z-[0] w-[40%] h-[40%] left-28 rtl:right-28 top-48 blue__gradient" />
 
-        <div className="w-full h-full grid grid-cols-12 grid-rows-4 bg-transparent gap-y-5 z-[1] gap-x-5 min-w-[1280px] min-h-[600px] max-h-[650px]">
-          <div className="row-span-4 col-span-4  flex flex-col gap-y-10 bg-dark p-5 rounded-2xl">
-            <div className="bg-dark-back w-full h-full flex flex-col gap-y-10 rounded-2xl p-5 justify-start border-2 border-solid border-light">
+        <div className=" bg-dark p-5 rounded-2xl w-full h-full grid grid-cols-12 grid-rows-4 bg-transparent gap-y-5 z-[1] gap-x-5">
+          <div className="row-span-4 col-span-4  flex flex-col gap-y-10 bg-transparent rounded-2xl">
+            <div className="w-full h-full flex flex-col gap-y-5 rounded-2xl  justify-start">
               {/* Why Part */}
               <div
                 className={
                   expandContext.title === "Why"
-                    ? `text-dark p-5 rounded-xl text-center text-lg bg-light w-full flex justify-start flex-col gap-y-5 transition-all duration-500 h-full`
-                    : "text-light text-center text-lg w-fit p-5 bg-transparent  transition-all duration-500"
+                    ? `text-light p-5 rounded-xl text-center text-lg bg-dark-back w-full flex justify-start flex-col gap-y-5 transition-all duration-500 h-fit`
+                    : "text-gray text-center text-lg w-full rounded-2xl p-5 bg-dark-back  transition-all duration-500"
                 }
               >
                 <button
@@ -44,15 +44,15 @@ export default function PrivacyContext(props: PageProps) {
                   <div
                     className={
                       expandContext.title === "Why"
-                        ? `bg-dark flex  w-full h-full justify-center items-start flex-col text-light transition-all duration-300 rounded-2xl px-5`
+                        ? `bg-dark flex  w-full h-full justify-center items-start flex-col text-light transition-all duration-300 rounded-2xl p-4 gap-y-3`
                         : `hidden`
                     }
                   >
                     <button
                       className={
                         expandContext.subTitle === "ValidateTransaction"
-                          ? `bg-light text-dark px-5 rounded-2xl transition-all duration-300`
-                          : ``
+                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 w-fit h-fit`
+                          : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
@@ -66,8 +66,8 @@ export default function PrivacyContext(props: PageProps) {
                     <button
                       className={
                         expandContext.subTitle === "Marketing"
-                          ? `bg-light text-dark px-5 rounded-2xl transition-all duration-300`
-                          : ``
+                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300`
+                          : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
@@ -81,8 +81,8 @@ export default function PrivacyContext(props: PageProps) {
                     <button
                       className={
                         expandContext.subTitle === "ValidateIdentity"
-                          ? `bg-light text-dark px-5 rounded-2xl transition-all duration-300`
-                          : ``
+                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300`
+                          : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
@@ -96,8 +96,8 @@ export default function PrivacyContext(props: PageProps) {
                     <button
                       className={
                         expandContext.subTitle === "Support"
-                          ? `bg-light text-dark px-5 rounded-2xl transition-all duration-300`
-                          : ``
+                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300`
+                          : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
@@ -115,8 +115,8 @@ export default function PrivacyContext(props: PageProps) {
               <div
                 className={
                   expandContext.title === "How"
-                    ? `text-dark p-5 rounded-xl text-center text-lg bg-light w-full flex justify-start flex-col gap-y-5 transition-all duration-500 h-full`
-                    : "text-light text-center text-lg w-fit p-5 bg-transparent  transition-all duration-500"
+                    ? `text-light p-5 rounded-xl text-center text-lg bg-dark-back w-full flex justify-start flex-col gap-y-5 transition-all duration-500 h-fit`
+                    : "text-gray text-center text-lg w-full rounded-2xl p-5 bg-dark-back  transition-all duration-500"
                 }
               >
                 <button
@@ -134,15 +134,15 @@ export default function PrivacyContext(props: PageProps) {
                   <div
                     className={
                       expandContext.title === "How"
-                        ? `bg-dark flex  w-full h-full justify-center items-start flex-col text-light transition-all duration-300 rounded-2xl px-5`
+                        ? `bg-dark flex  w-full h-full justify-center items-start flex-col text-light transition-all duration-300 rounded-2xl p-4 gap-y-3`
                         : `hidden`
                     }
                   >
                     <button
                       className={
                         expandContext.subTitle === "PersonalData"
-                          ? `bg-light text-dark px-5 rounded-2xl transition-all duration-300`
-                          : ``
+                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300`
+                          : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
@@ -156,8 +156,8 @@ export default function PrivacyContext(props: PageProps) {
                     <button
                       className={
                         expandContext.subTitle === "TransactionRecipts"
-                          ? `bg-light text-dark px-5 rounded-2xl transition-all duration-300`
-                          : ``
+                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300`
+                          : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
@@ -175,8 +175,8 @@ export default function PrivacyContext(props: PageProps) {
               <div
                 className={
                   expandContext.title === "What"
-                    ? `text-dark p-5 rounded-xl text-center text-lg bg-light w-full flex justify-start flex-col gap-y-5 transition-all duration-500 h-full`
-                    : "text-light text-center text-lg w-fit p-5 bg-transparent  transition-all duration-500"
+                    ? `text-light p-5 rounded-2xl text-center text-lg bg-dark-back w-full flex justify-start flex-col gap-y-5 transition-all duration-500 h-fit`
+                    : "text-gray text-center text-lg w-full rounded-2xl p-5 bg-dark-back  transition-all duration-500"
                 }
               >
                 <button
@@ -190,19 +190,19 @@ export default function PrivacyContext(props: PageProps) {
                 >
                   What Data We Collect
                 </button>
-                <div className="w-full h-full flex justify-center">
+                <div className="w-full h-fit flex justify-center">
                   <div
                     className={
                       expandContext.title === "What"
-                        ? `bg-dark   w-full h-full flex justify-center items-start flex-col text-light transition-all duration-300 rounded-2xl px-5`
+                        ? `bg-dark flex  w-full h-full justify-center items-start flex-col text-light transition-all duration-300 rounded-2xl p-4 gap-y-3`
                         : `hidden`
                     }
                   >
                     <button
                       className={
                         expandContext.subTitle === "ContactInfo"
-                          ? `bg-light text-dark px-5 rounded-2xl transition-all duration-300`
-                          : ``
+                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300`
+                          : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
@@ -216,8 +216,8 @@ export default function PrivacyContext(props: PageProps) {
                     <button
                       className={
                         expandContext.subTitle === "IdentityInfo"
-                          ? `bg-light text-dark px-5 rounded-2xl transition-all duration-300`
-                          : ``
+                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300`
+                          : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
@@ -232,8 +232,8 @@ export default function PrivacyContext(props: PageProps) {
                     <button
                       className={
                         expandContext.subTitle === "ThirdPartyAssociation"
-                          ? `bg-light text-dark px-5 rounded-2xl transition-all duration-300`
-                          : ``
+                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300`
+                          : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
@@ -251,8 +251,8 @@ export default function PrivacyContext(props: PageProps) {
               <div
                 className={
                   expandContext.title === "Legal"
-                    ? `text-dark p-5 rounded-xl text-center text-lg bg-light w-full flex justify-start flex-col gap-y-5 transition-all duration-500 h-full`
-                    : "text-light text-center text-lg w-fit p-5 bg-transparent  transition-all duration-500"
+                    ? `text-light p-5 rounded-xl text-center text-lg bg-dark-back w-full flex justify-start flex-col gap-y-5 transition-all duration-500 h-fit`
+                    : "text-gray text-center text-lg w-full rounded-2xl p-5 bg-dark-back  transition-all duration-500"
                 }
               >
                 <button
@@ -270,15 +270,15 @@ export default function PrivacyContext(props: PageProps) {
                   <div
                     className={
                       expandContext.title === "Legal"
-                        ? `bg-dark  w-full h-full flex justify-center items-start flex-col text-light transition-all duration-300 rounded-2xl px-5`
+                        ? `bg-dark flex  w-full h-full justify-center items-start flex-col text-light transition-all duration-300 rounded-2xl p-4 gap-y-3`
                         : `hidden`
                     }
                   >
                     <button
                       className={
                         expandContext.subTitle === "Canada"
-                          ? `bg-light text-dark px-5 rounded-2xl transition-all duration-300`
-                          : ``
+                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300`
+                          : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
@@ -292,8 +292,8 @@ export default function PrivacyContext(props: PageProps) {
                     <button
                       className={
                         expandContext.subTitle === "Iran"
-                          ? `bg-light text-dark px-5 rounded-2xl transition-all duration-300`
-                          : ``
+                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300`
+                          : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
@@ -307,8 +307,8 @@ export default function PrivacyContext(props: PageProps) {
                     <button
                       className={
                         expandContext.subTitle === "Afghanistan"
-                          ? `bg-light text-dark px-5 rounded-2xl transition-all duration-300`
-                          : ``
+                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300`
+                          : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
@@ -322,8 +322,8 @@ export default function PrivacyContext(props: PageProps) {
                     <button
                       className={
                         expandContext.subTitle === "Germany"
-                          ? `bg-light text-dark px-5 rounded-2xl transition-all duration-300`
-                          : ``
+                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300`
+                          : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
@@ -339,8 +339,8 @@ export default function PrivacyContext(props: PageProps) {
               </div>
             </div>
           </div>
-          <div className="row-span-4 col-span-8 bg-light p-5 rounded-2xl text-xl">
-            {(expandContext.title, expandContext.subTitle)}
+          <div className="row-span-4 col-span-8 bg-dark-glass text-light p-5 rounded-2xl text-xl">
+            {context}
           </div>
         </div>
       </div>

@@ -27,34 +27,39 @@ export default function LandingPrivacy(props: PageProps) {
           rotate-3 hover:rotate-12 sm:left-72 left-44 top-20
           w-[150px] sm:w-auto`}
         />
+
         <div className="opacity-20 absolute z-[0] w-[60%] h-[60%] rounded-full top-20 left-10 rtl:right-10 light__gradient" />
         <div className="opacity-65 absolute z-[0] w-[40%] h-[40%] left-28 rtl:right-28 top-48 blue__gradient" />
-
-        <TypeAnimation
-          sequence={[
-            "Privacy And Policy" + ".", // Types 'One'
-            showTypingAnimtionDuration,
-            () => {},
-            "Privacy And Policy" + "..", // Types 'Two'
-            showTypingAnimtionDuration,
-            () => {},
-            "Privacy And Policy" + "...", // Types 'Three'
-            showTypingAnimtionDuration,
-            () => {},
-            "", // Types 'One'
-            typingAnimtionDuration,
-            () => {},
-          ]}
-          speed={50}
-          wrapper="h2"
-          cursor={true}
-          repeat={Infinity}
-          style={{
-            textAlign: "start",
-            direction: font === "Fa" ? "rtl" : "ltr",
-          }}
-          className={`z-[1] sm:max-w-[30rem] rtl:sm:max-w-[32rem] text-5xl sm:text-7xl h-[11rem] leading-[3.5rem] sm:leading-[5rem] flex flex-col text-${oppositeTheme} font-${font}-regular`}
-        />
+        <div className="w-full h-fit flex flex-col gap-y-10 -mt-24">
+          <span className={`font-${font}-bold text-blue text-start text-4xl`}>
+            Privacy And Policy
+          </span>
+          <TypeAnimation
+            sequence={[
+              "When You Are Enough" + ".", // Types 'One'
+              showTypingAnimtionDuration,
+              () => {},
+              "When You Are Enough" + "..", // Types 'Two'
+              showTypingAnimtionDuration,
+              () => {},
+              "When You Are Enough" + "...", // Types 'Three'
+              showTypingAnimtionDuration,
+              () => {},
+              "", // Types 'One'
+              typingAnimtionDuration,
+              () => {},
+            ]}
+            speed={50}
+            wrapper="h2"
+            cursor={true}
+            repeat={Infinity}
+            style={{
+              textAlign: "start",
+              direction: font === "Fa" ? "rtl" : "ltr",
+            }}
+            className={`z-[1] sm:max-w-[30rem] rtl:sm:max-w-[32rem] text-5xl sm:text-7xl h-[11rem] leading-[3.5rem] sm:leading-[5rem] flex flex-col text-${oppositeTheme} font-${font}-regular`}
+          />
+        </div>
 
         <div className="flex flex-col gap-y-5 z-[1]">
           <span
