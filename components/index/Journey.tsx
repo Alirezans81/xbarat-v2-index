@@ -1,6 +1,7 @@
 import { PageProps } from "@/interfaces/PageProps";
 import { ThemeState } from "@/lib/store";
 import Image from "next/image";
+import { Tooltip } from "react-tooltip";
 
 export default function Journey(props: PageProps) {
   const { font, lang, theme } = props;
@@ -10,23 +11,23 @@ export default function Journey(props: PageProps) {
   const steps = [
     {
       icon: require("@/public/images/index/Journey/step1.png"),
-      title: lang['index-journey-step-1-title'],
-      desc: lang['index-journey-step-1-desc'],
+      title: lang["index-journey-step-1-title"],
+      desc: lang["index-journey-step-1-desc"],
     },
     {
       icon: require("@/public/images/index/Journey/step1.png"),
-      title: lang['index-journey-step-2-title'],
-      desc: lang['index-journey-step-2-desc'],
+      title: lang["index-journey-step-2-title"],
+      desc: lang["index-journey-step-2-desc"],
     },
     {
       icon: require("@/public/images/index/Journey/step1.png"),
-      title: lang['index-journey-step-3-title'],
-      desc: lang['index-journey-step-3-desc'],
+      title: lang["index-journey-step-3-title"],
+      desc: lang["index-journey-step-3-desc"],
     },
     {
       icon: require("@/public/images/index/Journey/step1.png"),
-      title: lang['index-journey-step-4-title'],
-      desc: lang['index-journey-step-4-desc'],
+      title: lang["index-journey-step-4-title"],
+      desc: lang["index-journey-step-4-desc"],
     },
   ];
 
@@ -67,7 +68,30 @@ export default function Journey(props: PageProps) {
             <span className={`text-${oppositeTheme} text-xl mt-2`}>
               {step.title}
             </span>
-            <span className="text-gray text-center">{step.desc}</span>
+            <span className="text-gray text-center line-clamp-6">
+              {step.desc}
+            </span>
+            <button
+              id={`${"step-" + index}-more-tooltip`}
+              className={`text-${oppositeTheme}`}
+            >
+              More
+            </button>
+            <Tooltip
+              anchorSelect={`#${"step-" + index}-more-tooltip`}
+              place="top"
+              clickable
+              style={{
+                width: 300,
+                backgroundColor: "#fff",
+                borderRadius: 10,
+                color: "#2A2B2E",
+                zIndex: 100,
+                backdropFilter: "none",
+              }}
+            >
+              {step.desc}
+            </Tooltip>
           </div>
         ))}
       </div>
