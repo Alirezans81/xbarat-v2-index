@@ -72,7 +72,7 @@ export default function PrivacyPolicy() {
             navbarDivRef={navbarDivRef}
           />
           <div className="w-full flex justify-center ">
-            <div className="max-w-[1280px] px-[7%] xl:px-0">
+            <div className="max-w-[1280px] px-[7%] xl:px-0 pt-20 lg:pt-0">
               <LandingPrivacy
                 lang={lang}
                 font={font}
