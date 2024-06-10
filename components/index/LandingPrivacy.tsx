@@ -5,7 +5,10 @@ import { TypeAnimation } from "react-type-animation";
 import Star from "@/public/images/common/star.png";
 
 import ArrowRight from "@/public/images/index/Hero/arrowRight.png";
+import ArrowRightDark from "@/public/images/index/Hero/arrowRightDark.png";
 import ArrowLeft from "@/public/images/index/Hero/arrowLeft.png";
+import ArrowLeftDark from "@/public/images/index/Hero/arrowLeftDark.png";
+
 import Button from "../common/Button";
 import PrivacLandingPhoto from "@/public/images/index/Privacy/PrivacyLand.png";
 export default function LandingPrivacy(props: PageProps) {
@@ -17,11 +20,21 @@ export default function LandingPrivacy(props: PageProps) {
   const showTypingAnimtionDuration: number = 1000;
 
   return (
-    <section className="w-full flex justify-between items-center mt-10 ">
+    <section
+      className={`w-full flex justify-between items-center mt-10 font-${font}-regular`}
+    >
       <div className="w-full flex flex-col relative gap-y-10 sm:gap-y-28 mb-10 lg:mb-0">
         <Image
           alt="Arrow"
-          src={font === "Fa" ? ArrowRight : ArrowLeft}
+          src={
+            font === "Fa" && theme === "dark"
+              ? ArrowRight
+              : font === "Fa" && theme === "light"
+              ? ArrowRightDark
+              : font === "En" && theme === "light"
+              ? ArrowLeftDark
+              : ArrowLeft
+          }
           className={`z-[2] absolute sm:top-24 transition-all duration-300
           rtl:-rotate-3 rtl:hover:-rotate-12 rtl:sm:left-36 rtl:left-5 rtl:sm:top-28 rtl:top-20
           rotate-3 hover:rotate-12 sm:left-72 left-44 top-20
@@ -36,13 +49,13 @@ export default function LandingPrivacy(props: PageProps) {
           </span>
           <TypeAnimation
             sequence={[
-              "When You Are Enough" + ".", // Types 'One'
+              lang["slogan"] + ".", // Types 'One'
               showTypingAnimtionDuration,
               () => {},
-              "When You Are Enough" + "..", // Types 'Two'
+              lang["slogan"] + "..", // Types 'Two'
               showTypingAnimtionDuration,
               () => {},
-              "When You Are Enough" + "...", // Types 'Three'
+              lang["slogan"] + "...", // Types 'Three'
               showTypingAnimtionDuration,
               () => {},
               "", // Types 'One'

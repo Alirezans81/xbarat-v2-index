@@ -89,24 +89,6 @@ export default function PrivacyPolicy() {
               />
             </div>
           </div>
-          {/* <div className="w-full flex justify-center ">
-            <div className="max-w-[1280px] px-[7%] xl:px-0 ">
-              <InfoWeCollect
-                lang={lang}
-                font={font}
-                theme={theme as unknown as ThemeState}
-              />
-            </div>
-          </div>
-          <div className="w-full flex justify-center ">
-            <div className="max-w-[1280px] px-[7%] xl:px-0 ">
-              <WhyWeCollect
-                lang={lang}
-                font={font}
-                theme={theme as unknown as ThemeState}
-              />
-            </div>
-          </div> */}
         </div>
       </div>
     );

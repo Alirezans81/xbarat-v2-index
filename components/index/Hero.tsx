@@ -5,8 +5,12 @@ import { TypeAnimation } from "react-type-animation";
 
 import Star from "@/public/images/common/star.png";
 import HeroPhoto from "@/public/images/index/Hero/hero.png";
+
 import ArrowRight from "@/public/images/index/Hero/arrowRight.png";
+import ArrowRightDark from "@/public/images/index/Hero/arrowRightDark.png";
 import ArrowLeft from "@/public/images/index/Hero/arrowLeft.png";
+import ArrowLeftDark from "@/public/images/index/Hero/arrowLeftDark.png";
+
 import Button from "../common/Button";
 
 export default function Hero(props: PageProps) {
@@ -22,7 +26,15 @@ export default function Hero(props: PageProps) {
       <div className="w-full flex flex-col relative gap-y-10 sm:gap-y-28 mb-10 lg:mb-0">
         <Image
           alt="Arrow"
-          src={font === "Fa" ? ArrowRight : ArrowLeft}
+          src={
+            font === "Fa" && theme === "dark"
+              ? ArrowRight
+              : font === "Fa" && theme === "light"
+              ? ArrowRightDark
+              : font !== "Fa" && theme === "light"
+              ? ArrowLeftDark
+              : ArrowLeft
+          }
           className={`z-[2] absolute sm:top-24 transition-all duration-300
           rtl:-rotate-3 rtl:hover:-rotate-12 rtl:sm:left-36 rtl:left-5 rtl:sm:top-28 rtl:top-20
           rotate-3 hover:rotate-12 sm:left-72 left-44 top-20
