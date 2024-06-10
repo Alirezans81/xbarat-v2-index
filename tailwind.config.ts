@@ -8,6 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes:{
+        glowtextLight: {
+          '0%': { color: '#0A8DFF' },
+          '100%': { color: '#FFFFFF', }, 
+        },
+        glowtextDark: {
+          '0%': { color: '#0A8DFF' },
+          '100%': { color: '#171d20', }, 
+        },
+      },
+      animation:{
+        glowtextLight:"glowtextLight 3s ease-in-out 1",
+        glowtextDark:"glowtextDark 3s ease-in-out 1"
+      },
       colors: {
         dark: "#171d20",
         "dark-back": "#152831",

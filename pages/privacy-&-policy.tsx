@@ -1,6 +1,4 @@
-"use client";
 import "../app/globals.css";
-
 import Navbar from "@/components/common/Navbar";
 import {
   ThemeState,
@@ -16,8 +14,7 @@ import Logo from "@/public/images/logo.png";
 import { MutableRefObject, useEffect, useRef, useState } from "react";
 import SlideMenu from "@/components/common/SlideMenu";
 import LandingPrivacy from "@/components/index/LandingPrivacy";
-import InfoWeCollect from "@/components/index/InfoWeCollect";
-import WhyWeCollect from "@/components/index/WhyWeCollectInfo";
+
 export default function PrivacyPolicy() {
   const lang = useLocaleFileStore((state) => state.localeFile);
   const theme = useThemeStore((state) => state.theme);
@@ -81,7 +78,7 @@ export default function PrivacyPolicy() {
             </div>
           </div>
           <div className="w-full flex justify-center ">
-            <div className="max-w-[1280px] px-[7%] xl:px-0 pb-20">
+            <div className="max-w-[1280px] px-[7%] xl:px-0 pb-0">
               <PrivacyContext
                 lang={lang}
                 font={font}

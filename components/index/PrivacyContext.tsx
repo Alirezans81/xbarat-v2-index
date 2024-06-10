@@ -345,7 +345,11 @@ export default function PrivacyContext(props: PageProps) {
             className={`row-span-3 col-span-12 md:row-span-4 md:col-span-8 `}
           >
             <div
-              className={`bg-${theme}-glass text-${oppositeTheme} p-5 rounded-2xl text-xl text-start h-fit w-fit`}
+              className={
+                theme === "dark"
+                  ? `bg-${theme}-glass  p-5 rounded-2xl text-xl text-start h-fit w-fit animate-glowtextLight text-white`
+                  : `bg-${theme}-glass  p-5 rounded-2xl text-xl text-start h-fit w-fit animate-glowtextDark text-black`
+              }
             >
               {context}
             </div>
