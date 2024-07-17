@@ -9,7 +9,7 @@ export type ThemeActions = {
   toggleTheme: () => void;
 };
 export const useThemeStore = create<ThemeState & ThemeActions>((set) => ({
-  theme: "light",
+  theme: "dark",
   toggleTheme: () => {
     set((state) => ({
       theme: state.theme === "dark" ? "light" : "dark",
