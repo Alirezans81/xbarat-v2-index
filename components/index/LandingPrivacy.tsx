@@ -5,9 +5,12 @@ import { TypeAnimation } from "react-type-animation";
 import Star from "@/public/images/common/star.png";
 
 import ArrowRight from "@/public/images/index/Hero/arrowRight.png";
+import ArrowRightDark from "@/public/images/index/Hero/arrowRightDark.png";
 import ArrowLeft from "@/public/images/index/Hero/arrowLeft.png";
+import ArrowLeftDark from "@/public/images/index/Hero/arrowLeftDark.png";
+
 import Button from "../common/Button";
-import PrivacLandingPhoto from "@/public/images/index/Privacy/PrivacyLanding.png";
+import PrivacLandingPhoto from "@/public/images/index/Privacy/PrivacyLand.png";
 export default function LandingPrivacy(props: PageProps) {
   const { theme, font, lang } = props;
   const oppositeTheme: string =
@@ -17,44 +20,59 @@ export default function LandingPrivacy(props: PageProps) {
   const showTypingAnimtionDuration: number = 1000;
 
   return (
-    <section className="w-full flex justify-between items-center mt-10 ">
+    <section
+      className={`w-full flex justify-between items-center mt-10 font-${font}-regular`}
+    >
       <div className="w-full flex flex-col relative gap-y-10 sm:gap-y-28 mb-10 lg:mb-0">
         <Image
           alt="Arrow"
-          src={font === "Fa" ? ArrowRight : ArrowLeft}
+          src={
+            font === "Fa" && theme === "dark"
+              ? ArrowRight
+              : font === "Fa" && theme === "light"
+              ? ArrowRightDark
+              : font === "En" && theme === "light"
+              ? ArrowLeftDark
+              : ArrowLeft
+          }
           className={`z-[2] absolute sm:top-24 transition-all duration-300
           rtl:-rotate-3 rtl:hover:-rotate-12 rtl:sm:left-36 rtl:left-5 rtl:sm:top-28 rtl:top-20
           rotate-3 hover:rotate-12 sm:left-72 left-44 top-20
           w-[150px] sm:w-auto`}
         />
+
         <div className="opacity-20 absolute z-[0] w-[60%] h-[60%] rounded-full top-20 left-10 rtl:right-10 light__gradient" />
         <div className="opacity-65 absolute z-[0] w-[40%] h-[40%] left-28 rtl:right-28 top-48 blue__gradient" />
-
-        <TypeAnimation
-          sequence={[
-            "Privacy And Policy" + ".", // Types 'One'
-            showTypingAnimtionDuration,
-            () => {},
-            "Privacy And Policy" + "..", // Types 'Two'
-            showTypingAnimtionDuration,
-            () => {},
-            "Privacy And Policy" + "...", // Types 'Three'
-            showTypingAnimtionDuration,
-            () => {},
-            "", // Types 'One'
-            typingAnimtionDuration,
-            () => {},
-          ]}
-          speed={50}
-          wrapper="h2"
-          cursor={true}
-          repeat={Infinity}
-          style={{
-            textAlign: "start",
-            direction: font === "Fa" ? "rtl" : "ltr",
-          }}
-          className={`z-[1] sm:max-w-[30rem] rtl:sm:max-w-[32rem] text-5xl sm:text-7xl h-[11rem] leading-[3.5rem] sm:leading-[5rem] flex flex-col text-${oppositeTheme} font-${font}-regular`}
-        />
+        <div className="w-full h-fit flex flex-col gap-y-10 -mt-24">
+          <span className={`font-${font}-bold text-blue text-start text-4xl`}>
+            Privacy And Policy
+          </span>
+          <TypeAnimation
+            sequence={[
+              lang["slogan"] + ".", // Types 'One'
+              showTypingAnimtionDuration,
+              () => {},
+              lang["slogan"] + "..", // Types 'Two'
+              showTypingAnimtionDuration,
+              () => {},
+              lang["slogan"] + "...", // Types 'Three'
+              showTypingAnimtionDuration,
+              () => {},
+              "", // Types 'One'
+              typingAnimtionDuration,
+              () => {},
+            ]}
+            speed={50}
+            wrapper="h2"
+            cursor={true}
+            repeat={Infinity}
+            style={{
+              textAlign: "start",
+              direction: font === "Fa" ? "rtl" : "ltr",
+            }}
+            className={`z-[1] sm:max-w-[30rem] rtl:sm:max-w-[32rem] text-5xl sm:text-7xl h-[11rem] leading-[3.5rem] sm:leading-[5rem] flex flex-col text-${oppositeTheme} font-${font}-regular`}
+          />
+        </div>
 
         <div className="flex flex-col gap-y-5 z-[1]">
           <span
@@ -68,7 +86,6 @@ export default function LandingPrivacy(props: PageProps) {
             ensuring the security of your personal information. This Privacy
             Policy explains how we collect, use, and share your data.
           </span>
-          <Button font={font} lang={lang} theme={theme} />
         </div>
       </div>
       <div className="w-full relative z-[1] ml-20 hidden lg:block">
