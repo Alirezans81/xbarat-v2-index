@@ -41,7 +41,7 @@ export default function Page() {
 
   const navbarDivRef: MutableRefObject<HTMLDivElement | undefined> = useRef();
 
-  const oppositeTheme: string =
+  const oppositeTheme: ThemeState["theme"] =
     theme === ("dark" as ThemeState["theme"]) ? "light" : "dark";
 
   const [menuIsOpen, setMenuIsOpen] = useState(false);
