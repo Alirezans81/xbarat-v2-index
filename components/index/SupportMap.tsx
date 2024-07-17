@@ -1,14 +1,45 @@
+"use client";
+
 import { PageProps } from "@/interfaces/PageProps";
-import { ThemeState } from "@/lib/store";
+import {
+  Currency,
+  SupportLocation,
+  ThemeState,
+  useLoadingStore,
+  WalletTankType,
+} from "@/lib/store";
 import Image from "next/image";
 
 import MapImage from "@/public/images/index/Map/map.png";
 import { Tooltip } from "react-tooltip";
+import { useGetSupportLocations } from "@/apis/index/SupportMap/hooks";
+import { useEffect, useState } from "react";
 
 function Marker(
-  props: { delay: boolean; id: string; left: number; top: number } & PageProps
+  props: {
+    country_icon: string;
+    country_title: string;
+    currencies: Currency[];
+    wallet_tank_types: WalletTankType[];
+    delay: boolean;
+    id: string;
+    left: number;
+    top: number;
+  } & PageProps
 ) {
-  const { font, lang, theme, delay, id, left, top } = props;
+  const {
+    font,
+    lang,
+    theme,
+    delay,
+    id,
+    left,
+    top,
+    country_icon,
+    country_title,
+    currencies,
+    wallet_tank_types,
+  } = props;
   const oppositeTheme: string =
     theme == ("dark" as unknown as ThemeState) ? "light" : "dark";
 
@@ -45,16 +76,51 @@ function Marker(
           >
             <div className="flex justify-center gap-x-2 items-center border-b border-gray w-full pb-2">
               <Image
-                alt="CA"
+                alt={country_title + " icon"}
                 src={require("@/public/images/index/Map/ca.png")}
                 className="w-6 h-6"
               />
-              <span className={`text-${theme} text-center -mb-1`}>Canada</span>
+              <span className={`text-${theme} text-lg text-center -mb-2`}>
+                {country_title}
+              </span>
             </div>
-            <span className="text-gray max-w-[8rem] text-center mt-2">
-              We only work with <span className="text-blue">PayPal</span> in
-              this area.
-            </span>
+            <div className="w-full grid grid-cols-2 divide-x">
+              {currencies.length <= 1 && (
+                <div className="col-span-2 flex justify-center items-center">
+                  <Image
+                    width={40}
+                    height={40}
+                    alt={currencies[0].title}
+                    src={currencies[0].get_sym_pic_dark_url}
+                  />
+                </div>
+              )}
+              {currencies.length > 1 &&
+                currencies.map((currency, index) => (
+                  <div
+                    key={index}
+                    className="col-span-1 flex justify-center items-center"
+                  >
+                    <Image
+                      width={40}
+                      height={40}
+                      alt={currency.title}
+                      src={currency.get_sym_pic_dark_url}
+                    />
+                  </div>
+                ))}
+            </div>
+            <span className="text-dark text-center mt-2">Using</span>
+            <div className="flex flex-col gap-y-1">
+              {wallet_tank_types.map((wallet_tank_type, index) => (
+                <span
+                  key={index}
+                  className="w-full px-3 pt-1.5 rounded-full text-center bg-blue text-light"
+                >
+                  {wallet_tank_type.title}
+                </span>
+              ))}
+            </div>
           </div>
         </Tooltip>
       </div>
@@ -66,6 +132,21 @@ export default function SupportMap(props: PageProps) {
   const { font, lang, theme } = props;
   const oppositeTheme: string =
     theme == ("dark" as unknown as ThemeState) ? "light" : "dark";
+  const setLoading = useLoadingStore((state) => state.setLoading);
+
+  const [supportLocations, setSupportLocations] = useState<SupportLocation[]>(
+    []
+  );
+
+  const { getSupportLocations, isLoading: getSupportLocationsIsLoading } =
+    useGetSupportLocations();
+  useEffect(() => {
+    setLoading(getSupportLocationsIsLoading);
+  }, [getSupportLocationsIsLoading]);
+
+  useEffect(() => {
+    getSupportLocations(setSupportLocations);
+  }, []);
 
   return (
     <section
@@ -91,60 +172,22 @@ export default function SupportMap(props: PageProps) {
 
         <Image id="map-img" alt="Map" src={MapImage} className="w-full" />
 
-        <Marker
-          font={font}
-          lang={lang}
-          theme={theme}
-          id="tooltip1"
-          delay={false}
-          top={32.4279}
-          left={53.688}
-        />
-        <Marker
-          font={font}
-          lang={lang}
-          theme={theme}
-          id="tooltip1"
-          delay={false}
-          top={33.9391}
-          left={67.71}
-        />
-        <Marker
-          font={font}
-          lang={lang}
-          theme={theme}
-          id="tooltip1"
-          delay={false}
-          top={56.1304}
-          left={-106.3468}
-        />
-        <Marker
-          font={font}
-          lang={lang}
-          theme={theme}
-          id="tooltip1"
-          delay={false}
-          top={37.0902}
-          left={-95.7129}
-        />
-        <Marker
-          font={font}
-          lang={lang}
-          theme={theme}
-          id="tooltip1"
-          delay={false}
-          top={40.0691}
-          left={45.0382}
-        />
-        <Marker
-          font={font}
-          lang={lang}
-          theme={theme}
-          id="tooltip1"
-          delay={false}
-          top={61.524}
-          left={105.3188}
-        />
+        {supportLocations.map((supportLocation, index) => (
+          <Marker
+            key={index}
+            font={font}
+            lang={lang}
+            theme={theme}
+            id={"tooltip" + index}
+            delay={index % 3 === 0}
+            country_icon={supportLocation.country_icon}
+            country_title={supportLocation.country_title}
+            currencies={supportLocation.currencies}
+            wallet_tank_types={supportLocation.wallet_tank_type}
+            top={supportLocation.latitude}
+            left={supportLocation.longitude}
+          />
+        ))}
       </div>
     </section>
   );

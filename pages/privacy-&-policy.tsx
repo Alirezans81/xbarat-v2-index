@@ -13,7 +13,7 @@ import {
 import Image from "next/image";
 
 import Logo from "@/public/images/logo.png";
-import { MutableRefObject, useEffect, useRef, useState } from "react";
+import { LegacyRef, MutableRefObject, useEffect, useRef, useState } from "react";
 import SlideMenu from "@/components/common/SlideMenu";
 import LandingPrivacy from "@/components/index/LandingPrivacy";
 import InfoWeCollect from "@/components/index/InfoWeCollect";
@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
   const navbarDivRef: MutableRefObject<HTMLDivElement | undefined> = useRef();
 
   const oppositeTheme: string =
-    theme === ("dark" as unknown as ThemeState) ? "light" : "dark";
+    theme === ("dark" as ThemeState["theme"]) ? "light" : "dark";
 
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
