@@ -5,9 +5,6 @@ import { persist } from "zustand/middleware";
 export type ThemeState = {
   theme: "dark" | "light";
 };
-export function isThemeState(value: string): value is ThemeState {
-  return true;
-}
 export type ThemeActions = {
   toggleTheme: () => void;
 };
@@ -137,3 +134,29 @@ export const useRouteStore = create<RouteState & RouteActions>((set) => ({
     })),
 }));
 //-----------------------------
+
+//----------- Route -----------
+export type Currency = {
+  title: string;
+  get_sym_pic_light_url: string;
+  get_sym_pic_dark_url: string;
+  get_sym_pic_gray_url: string;
+};
+export type WalletTankType = {
+  title: string;
+};
+export type SupportLocation = {
+  country: string;
+  country_title: string;
+  country_icon: string;
+  currencies: Currency[];
+  wallet_tank_type: WalletTankType[];
+  title: string;
+  longitude: number;
+  latitude: number;
+  description: string;
+  show_order: number;
+  coming_soon: boolean;
+  is_active: boolean;
+};
+//-----------------------------1

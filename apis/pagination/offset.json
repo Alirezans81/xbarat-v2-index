@@ -27,5 +27,6 @@
   "check-email": 0,
   "send-email": 0,
   "forgot-password": 0,
-  "change-password": 0
+  "change-password": 0,
+  "support-location": 0
 }
