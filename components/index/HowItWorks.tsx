@@ -9,7 +9,7 @@ import Button from "../common/Button";
 export default function HowItWorks(props: PageProps) {
   const { font, lang, theme } = props;
   const oppositeTheme: string =
-    theme == ("dark" as unknown as ThemeState) ? "light" : "dark";
+    theme == ("dark" as ThemeState["theme"]) ? "light" : "dark";
 
   return (
     <section

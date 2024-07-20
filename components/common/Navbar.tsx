@@ -29,7 +29,7 @@ export default function Navbar(
   const pathname = usePathname();
 
   const oppositeTheme: string =
-    theme == ("dark" as unknown as ThemeState) ? "light" : "dark";
+    theme == ("dark" as ThemeState["theme"]) ? "light" : "dark";
 
   const [scrollY, setScrollY] = useState(0);
   useEffect(() => {
@@ -52,9 +52,7 @@ export default function Navbar(
   return (
     <div
       className={`sticky left-0 top-0 w-[100dvw] flex items-center justify-center transition-all duration-500 z-50 ${
-        scrollY === 0
-          ? ``
-          : `bg-${theme}-back shadow-xl shadow-black/5`
+        scrollY === 0 ? `` : `bg-${theme}-back shadow-xl shadow-black/5`
       }`}
     >
       <div

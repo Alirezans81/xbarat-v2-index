@@ -68,7 +68,7 @@ export default function PrivacyPolicy() {
           <Navbar
             lang={lang}
             font={font}
-            theme={theme as unknown as ThemeState}
+            theme={theme}
             routes={routes}
             activeRoute={activeRoute}
             setMenuIsOpen={setMenuIsOpen}
@@ -79,7 +79,7 @@ export default function PrivacyPolicy() {
               <LandingPrivacy
                 lang={lang}
                 font={font}
-                theme={theme as unknown as ThemeState}
+                theme={theme}
               />
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function PrivacyPolicy() {
               <PrivacyContext
                 lang={lang}
                 font={font}
-                theme={theme as unknown as ThemeState}
+                theme={theme}
               />
             </div>
           </div>
