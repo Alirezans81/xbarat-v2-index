@@ -10,7 +10,7 @@ import GooglePlay from "@/public/images/common/google-play-badge.png";
 export default function Footer(props: PageProps) {
   const { theme, lang, font } = props;
   const oppositeTheme: string =
-    theme == ("dark" as unknown as ThemeState) ? "light" : "dark";
+    theme == ("dark" as ThemeState["theme"]) ? "light" : "dark";
 
   return (
     <footer
@@ -171,7 +171,7 @@ export default function Footer(props: PageProps) {
         </Link>
 
         <span className="col-span-12 text-center text-gray">
-          {lang['index-copyright']}
+          {lang["index-copyright"]}
         </span>
       </div>
     </footer>

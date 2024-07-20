@@ -1,10 +1,10 @@
 import axios from "axios";
 import queryString from "query-string";
 
-const api =
-  process.env.NEXT_PUBLIC_APP_MODE === "DEVELOPMENT"
-    ? require("../../api-dev.json")
-    : require("../../api.json");
+import dev from "@/apis/api-dev";
+import prod from "@/apis/api";
+
+const api = process.env.NEXT_PUBLIC_APP_MODE === "DEVELOPMENT" ? dev() : prod();
 
 const getLocales = () => {
   const limit = require("../../pagination/limit.json")["locale"];

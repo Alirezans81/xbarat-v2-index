@@ -9,7 +9,7 @@ import Rings from "@/public/images/index/SocialMedia/rings.png";
 export default function SocialMedia(props: PageProps) {
   const { font, lang, theme } = props;
   const oppositeTheme: string =
-    theme == ("dark" as unknown as ThemeState) ? "light" : "dark";
+    theme == ("dark" as ThemeState["theme"]) ? "light" : "dark";
 
   const socialMediaFeatures = [
     {
@@ -96,7 +96,11 @@ export default function SocialMedia(props: PageProps) {
                   src={feature.icon}
                   className="w-5 h-5"
                 />
-                <span className={`text-${oppositeTheme} text-lg ${font === "Fa" ? "" : "-mb-1"}`}>
+                <span
+                  className={`text-${oppositeTheme} text-lg ${
+                    font === "Fa" ? "" : "-mb-1"
+                  }`}
+                >
                   {feature.title}
                 </span>
               </div>

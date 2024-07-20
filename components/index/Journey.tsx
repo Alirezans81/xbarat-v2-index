@@ -6,7 +6,7 @@ import { Tooltip } from "react-tooltip";
 export default function Journey(props: PageProps) {
   const { font, lang, theme } = props;
   const oppositeTheme: string =
-    theme == ("dark" as unknown as ThemeState) ? "light" : "dark";
+    theme == ("dark" as ThemeState["theme"]) ? "light" : "dark";
 
   const steps = [
     {

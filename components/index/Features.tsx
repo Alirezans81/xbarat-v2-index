@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Features(props: PageProps) {
   const { font, lang, theme } = props;
   const oppositeTheme: string =
-    theme == ("dark" as unknown as ThemeState) ? "light" : "dark";
+    theme == ("dark" as ThemeState["theme"]) ? "light" : "dark";
 
   const features = [
     {
@@ -77,7 +77,11 @@ export default function Features(props: PageProps) {
           <div
             key={index}
             className={`grid-cols-1 flex flex-col gap-y-5 items-center p-[10%] border border-transparent ${
-              (index + 1) % getGridCols() === 0 ? "" : font === 'Fa' ? "border-l-blue" : "border-r-blue"
+              (index + 1) % getGridCols() === 0
+                ? ""
+                : font === "Fa"
+                ? "border-l-blue"
+                : "border-r-blue"
             } ${
               index <= features.length / getGridCols() &&
               index !== features.length - 1

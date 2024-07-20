@@ -41,7 +41,7 @@ function Marker(
     wallet_tank_types,
   } = props;
   const oppositeTheme: string =
-    theme == ("dark" as unknown as ThemeState) ? "light" : "dark";
+    theme == ("dark" as ThemeState["theme"]) ? "light" : "dark";
 
   return (
     <div
@@ -131,7 +131,7 @@ function Marker(
 export default function SupportMap(props: PageProps) {
   const { font, lang, theme } = props;
   const oppositeTheme: string =
-    theme == ("dark" as unknown as ThemeState) ? "light" : "dark";
+    theme == ("dark" as ThemeState["theme"]) ? "light" : "dark";
   const setLoading = useLoadingStore((state) => state.setLoading);
 
   const [supportLocations, setSupportLocations] = useState<SupportLocation[]>(

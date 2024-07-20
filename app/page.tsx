@@ -78,7 +78,7 @@ export default function Page() {
           <Navbar
             lang={lang}
             font={font}
-            theme={theme as unknown as ThemeState}
+            theme={theme}
             routes={routes}
             activeRoute={activeRoute}
             setMenuIsOpen={setMenuIsOpen}
@@ -90,7 +90,7 @@ export default function Page() {
               <Hero
                 lang={lang}
                 font={font}
-                theme={theme as unknown as ThemeState}
+                theme={theme}
               />
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function Page() {
           <Agencies
             lang={lang}
             font={font}
-            theme={theme as unknown as ThemeState}
+            theme={theme}
           />
 
           <div className={`w-full flex justify-center overflow-hidden`}>
@@ -106,27 +106,27 @@ export default function Page() {
               <HowItWorks
                 lang={lang}
                 font={font}
-                theme={theme as unknown as ThemeState}
+                theme={theme}
               />
               <Features
                 lang={lang}
                 font={font}
-                theme={theme as unknown as ThemeState}
+                theme={theme}
               />
               <SocialMedia
                 lang={lang}
                 font={font}
-                theme={theme as unknown as ThemeState}
+                theme={theme}
               />
               <Journey
                 lang={lang}
                 font={font}
-                theme={theme as unknown as ThemeState}
+                theme={theme}
               />
               <SupportMap
                 lang={lang}
                 font={font}
-                theme={theme as unknown as ThemeState}
+                theme={theme}
               />
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function Page() {
           <Footer
             lang={lang}
             font={font}
-            theme={theme as unknown as ThemeState}
+            theme={theme}
           />
         </div>
       </div>

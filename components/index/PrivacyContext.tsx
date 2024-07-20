@@ -8,7 +8,7 @@ export default function PrivacyContext(props: PageProps) {
   });
   const { theme, font, lang } = props;
   const oppositeTheme: string =
-    theme == ("dark" as unknown as ThemeState) ? "light" : "dark";
+    theme == ("dark" as ThemeState["theme"]) ? "light" : "dark";
   const context = `${expandContext.title}+${expandContext.subTitle} A privacy policy is a statement or legal document (in privacy law) that discloses some or all of the ways a party gathers, uses, discloses, and manages a customer or clients data.1 Personal information can be anything that can be used to identify an individual, not limited to the persons name, address, date of birth, marital status, contact information, ID issue, and expiry date, financial records, credit information, medical history, where one travels, and intentions to acquire goods and services.2 In the case of a business, it is often a statement that declares a partys policy on how it collects, stores, and releases personal information it collects. It informs the client what specific information is collected, and whether it is kept confidential, shared with partners, or sold to other firms or enterprises.34 Privacy policies typically represent a broader, more generalized treatment, as opposed to data use statements, which tend to be more detailed and specific The exact contents of a certain privacy policy will depend upon the applicable law and may need to address requirements across geographical boundaries and legal jurisdictions. Most countries have own legislation and guidelines of who is covered, what information can be collected, and what it can be used for. In general, data protection laws in Europe cover the private sector, as well as the public sector. Their privacy laws apply not only to government operations but also to private enterprises and commercial transactions.`;
   return (
     <section
@@ -346,7 +346,7 @@ export default function PrivacyContext(props: PageProps) {
           >
             <div
               className={
-                theme === "dark"
+                theme === ("dark" as ThemeState["theme"])
                   ? `bg-${theme}-glass  p-5 rounded-2xl text-xl text-start h-fit w-fit animate-glowtextLight text-white`
                   : `bg-${theme}-glass  p-5 rounded-2xl text-xl text-start h-fit w-fit animate-glowtextDark text-black`
               }

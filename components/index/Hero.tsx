@@ -16,7 +16,7 @@ import Button from "../common/Button";
 export default function Hero(props: PageProps) {
   const { theme, font, lang } = props;
   const oppositeTheme: string =
-    theme == ("dark" as unknown as ThemeState) ? "light" : "dark";
+    theme == ("dark" as ThemeState["theme"]) ? "light" : "dark";
 
   const typingAnimtionDuration: number = 300;
   const showTypingAnimtionDuration: number = 1000;
@@ -27,11 +27,11 @@ export default function Hero(props: PageProps) {
         <Image
           alt="Arrow"
           src={
-            font === "Fa" && theme === "dark"
+            font === "Fa" && theme === ("dark" as ThemeState["theme"])
               ? ArrowRight
-              : font === "Fa" && theme === "light"
+              : font === "Fa" && theme === ("light" as ThemeState["theme"])
               ? ArrowRightDark
-              : font !== "Fa" && theme === "light"
+              : font !== "Fa" && theme === ("light" as ThemeState["theme"])
               ? ArrowLeftDark
               : ArrowLeft
           }
