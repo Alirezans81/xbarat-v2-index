@@ -13,7 +13,7 @@ export default function Button(props: PageProps) {
 
   return (
     <Link
-      href="https://app.xbarat.pro"
+      href={process.env.NEXT_PUBLIC_CTA_BUTTON + ""}
       className={`flex justify-center items-center rounded-lg px-5 py-[12.5px] font-${font}-regular relative px-7 w-fit`}
       onMouseOver={() => {
         setBgGradient("opacity-0");
