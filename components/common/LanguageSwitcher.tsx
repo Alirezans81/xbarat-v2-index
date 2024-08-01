@@ -50,15 +50,15 @@ export default function LanguageSwitcher() {
       "selectedLocaleIndex"
     ) as unknown as number;
 
-    console.log(savedSelectedLocaleIndex);
-
-    savedSelectedLocaleIndex !== null &&
-      savedSelectedLocaleIndex !== undefined &&
-      setSelectedLocale(locales[savedSelectedLocaleIndex]);
+    savedSelectedLocaleIndex !== null && savedSelectedLocaleIndex !== undefined
+      ? setSelectedLocale(locales[savedSelectedLocaleIndex])
+      : setSelectedLocale(locales[0]);
   };
   useEffect(() => {
     findSavedLocale();
   }, []);
+
+  console.log(selectedLocaleIndex);
 
   return (
     <div className="flex items-center">

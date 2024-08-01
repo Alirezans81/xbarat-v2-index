@@ -45,13 +45,28 @@ export default function Hero(props: PageProps) {
 
         <TypeAnimation
           sequence={[
-            lang["slogan"] + ".", // Types 'One'
+            (lang["slogan"] ||
+              (font === "Fa"
+                ? "وقتی خودت کافی هستی"
+                : font === "En"
+                ? "When you are enough"
+                : "")) + ".", // Types 'One'
             showTypingAnimtionDuration,
             () => {},
-            lang["slogan"] + "..", // Types 'Two'
+            (lang["slogan"] ||
+              (font === "Fa"
+                ? "وقتی خودت کافی هستی"
+                : font === "En"
+                ? "When you are enough"
+                : "")) + "..", // Types 'Two'
             showTypingAnimtionDuration,
             () => {},
-            lang["slogan"] + "...", // Types 'Three'
+            (lang["slogan"] ||
+              (font === "Fa"
+                ? "وقتی خودت کافی هستی"
+                : font === "En"
+                ? "When you are enough"
+                : "")) + "...", // Types 'Three'
             showTypingAnimtionDuration,
             () => {},
             "", // Types 'One'
