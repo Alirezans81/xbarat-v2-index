@@ -32,6 +32,6 @@ export default function api() {
     "forgot-password": `${devApiDomain}api/user/forget-password-set/`,
     "top-5-report": `${devApiDomain}api/report/`,
     "change-password": `${devApiDomain}api/user/change-password/`,
-    "support-location": `${devApiDomain}api/location-supports/`,
+    "support-location": `${devApiDomain}api/location-support/`,
   };
 }
