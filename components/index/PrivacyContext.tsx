@@ -1,15 +1,18 @@
 import { PageProps } from "@/interfaces/PageProps";
 import { ThemeState } from "@/lib/store";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function PrivacyContext(props: PageProps) {
+  const context = require("./PrivacyContext.json").Context;
   const [expandContext, setExpandContext] = useState({
-    title: "Why",
-    subTitle: "ValidateTransaction",
+    title: 0,
+    subTitle: 0,
   });
   const { theme, font, lang } = props;
   const oppositeTheme: string =
     theme == ("dark" as ThemeState["theme"]) ? "light" : "dark";
-  const context = `${expandContext.title}+${expandContext.subTitle} A privacy policy is a statement or legal document (in privacy law) that discloses some or all of the ways a party gathers, uses, discloses, and manages a customer or clients data.1 Personal information can be anything that can be used to identify an individual, not limited to the persons name, address, date of birth, marital status, contact information, ID issue, and expiry date, financial records, credit information, medical history, where one travels, and intentions to acquire goods and services.2 In the case of a business, it is often a statement that declares a partys policy on how it collects, stores, and releases personal information it collects. It informs the client what specific information is collected, and whether it is kept confidential, shared with partners, or sold to other firms or enterprises.34 Privacy policies typically represent a broader, more generalized treatment, as opposed to data use statements, which tend to be more detailed and specific The exact contents of a certain privacy policy will depend upon the applicable law and may need to address requirements across geographical boundaries and legal jurisdictions. Most countries have own legislation and guidelines of who is covered, what information can be collected, and what it can be used for. In general, data protection laws in Europe cover the private sector, as well as the public sector. Their privacy laws apply not only to government operations but also to private enterprises and commercial transactions.`;
+  useEffect(() => {
+    console.log(expandContext);
+  });
   return (
     <section
       className={`w-full h-full flex justify-between items-center font-${font}-regular`}
@@ -26,7 +29,7 @@ export default function PrivacyContext(props: PageProps) {
               {/* Why Part */}
               <div
                 className={
-                  expandContext.title === "Why"
+                  expandContext.title === 0
                     ? `text-${oppositeTheme} p-5 rounded-xl text-center text-lg bg-${theme}-back w-full flex justify-start flex-col gap-y-5 transition-all duration-500 h-fit`
                     : `text-gray text-center text-lg w-full rounded-2xl p-5 bg-${theme}-back transition-all duration-500 h-fit`
                 }
@@ -35,80 +38,80 @@ export default function PrivacyContext(props: PageProps) {
                   className="w-fit h-fit"
                   onClick={() =>
                     setExpandContext({
-                      title: "Why",
-                      subTitle: "",
+                      title: 0,
+                      subTitle: 0,
                     })
                   }
                 >
-                  Why We Collect Data
+                  {context[0].title}
                 </button>
                 <div className="w-full h-full flex justify-center">
                   <div
                     className={
-                      expandContext.title === "Why"
+                      expandContext.title === 0
                         ? `bg-${theme} flex  w-full h-fit justify-center items-start flex-col text-${oppositeTheme} transition-all duration-300 rounded-2xl p-4 gap-y-3`
                         : `hidden`
                     }
                   >
                     <button
                       className={
-                        expandContext.subTitle === "ValidateTransaction"
+                        expandContext.subTitle === 0
                           ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
                           : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
-                          title: "Why",
-                          subTitle: "ValidateTransaction",
+                          title: 0,
+                          subTitle: 0,
                         })
                       }
                     >
-                      Validate Transaction
+                      {context[0].drop[0].head}
                     </button>
                     <button
                       className={
-                        expandContext.subTitle === "Marketing"
+                        expandContext.subTitle === 1
                           ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
                           : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
-                          title: "Why",
-                          subTitle: "Marketing",
+                          title: 0,
+                          subTitle: 1,
                         })
                       }
                     >
-                      Marketing
+                      {context[0].drop[1].head}
                     </button>
                     <button
                       className={
-                        expandContext.subTitle === "ValidateIdentity"
+                        expandContext.subTitle === 2
                           ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
                           : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
-                          title: "Why",
-                          subTitle: "ValidateIdentity",
+                          title: 0,
+                          subTitle: 2,
                         })
                       }
                     >
-                      Validate Identity
+                      {context[0].drop[2].head}
                     </button>
                     <button
                       className={
-                        expandContext.subTitle === "Support"
+                        expandContext.subTitle === 3
                           ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
                           : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
-                          title: "Why",
-                          subTitle: "Support",
+                          title: 0,
+                          subTitle: 3,
                         })
                       }
                     >
-                      Support
+                      {context[0].drop[3].head}
                     </button>
                   </div>
                 </div>
@@ -116,7 +119,7 @@ export default function PrivacyContext(props: PageProps) {
               {/* How Part */}
               <div
                 className={
-                  expandContext.title === "How"
+                  expandContext.title === 1
                     ? `text-${oppositeTheme} p-5 rounded-xl text-center text-lg bg-${theme}-back w-full flex justify-start flex-col gap-y-5 transition-all duration-500 h-fit`
                     : `text-gray text-center text-lg w-full rounded-2xl p-5 bg-${theme}-back  transition-all duration-500 h-fit`
                 }
@@ -125,50 +128,50 @@ export default function PrivacyContext(props: PageProps) {
                   className="w-fit h-fit"
                   onClick={() =>
                     setExpandContext({
-                      title: "How",
-                      subTitle: "",
+                      title: 1,
+                      subTitle: 0,
                     })
                   }
                 >
-                  How Do We Collect Data
+                  {context[1].title}
                 </button>
                 <div className="w-full h-fit flex justify-center">
                   <div
                     className={
-                      expandContext.title === "How"
+                      expandContext.title === 1
                         ? `bg-${theme} flex  w-full h-full justify-center items-start flex-col text-${oppositeTheme} transition-all duration-300 rounded-2xl p-4 gap-y-3`
                         : `hidden`
                     }
                   >
                     <button
                       className={
-                        expandContext.subTitle === "PersonalData"
+                        expandContext.subTitle === 0
                           ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
                           : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
-                          title: "How",
-                          subTitle: "PersonalData",
+                          title: 1,
+                          subTitle: 0,
                         })
                       }
                     >
-                      Personal Data
+                      {context[1].drop[0].head}
                     </button>
                     <button
                       className={
-                        expandContext.subTitle === "TransactionRecipts"
+                        expandContext.subTitle === 1
                           ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
                           : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
-                          title: "How",
-                          subTitle: "TransactionRecipts",
+                          title: 1,
+                          subTitle: 1,
                         })
                       }
                     >
-                      Transaction Recipts
+                      {context[1].drop[1].head}
                     </button>
                   </div>
                 </div>
@@ -176,7 +179,7 @@ export default function PrivacyContext(props: PageProps) {
               {/* What Part */}
               <div
                 className={
-                  expandContext.title === "What"
+                  expandContext.title === 2
                     ? `text-${oppositeTheme} p-5 rounded-2xl text-center text-lg bg-${theme}-back w-full flex justify-start flex-col gap-y-5 transition-all duration-500 h-fit`
                     : `text-gray text-center text-lg w-full rounded-2xl p-5 bg-${theme}-back  transition-all duration-500 h-fit`
                 }
@@ -185,66 +188,66 @@ export default function PrivacyContext(props: PageProps) {
                   className="w-fit h-fit"
                   onClick={() =>
                     setExpandContext({
-                      title: "What",
-                      subTitle: "",
+                      title: 2,
+                      subTitle: 0,
                     })
                   }
                 >
-                  What Data We Collect
+                  {context[2].title}
                 </button>
                 <div className="w-full h-full flex justify-center">
                   <div
                     className={
-                      expandContext.title === "What"
+                      expandContext.title === 2
                         ? `bg-${theme} flex  w-full h-fit justify-center items-start flex-col text-${oppositeTheme} transition-all duration-300 rounded-2xl p-4 gap-y-3`
                         : `hidden`
                     }
                   >
                     <button
                       className={
-                        expandContext.subTitle === "ContactInfo"
+                        expandContext.subTitle === 0
                           ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
                           : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
-                          title: "What",
-                          subTitle: "ContactInfo",
+                          title: 2,
+                          subTitle: 0,
                         })
                       }
                     >
-                      Contact Info
+                      {context[2].drop[0].head}
                     </button>
                     <button
                       className={
-                        expandContext.subTitle === "IdentityInfo"
+                        expandContext.subTitle === 1
                           ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
                           : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
-                          title: "What",
-                          subTitle: "IdentityInfo",
+                          title: 2,
+                          subTitle: 1,
                         })
                       }
                     >
-                      Identity Info
+                      {context[2].drop[1].head}
                     </button>
 
                     <button
                       className={
-                        expandContext.subTitle === "ThirdPartyAssociation"
+                        expandContext.subTitle === 2
                           ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
                           : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
-                          title: "What",
-                          subTitle: "ThirdPartyAssociation",
+                          title: 2,
+                          subTitle: 2,
                         })
                       }
                     >
-                      Third Party Association
+                      {context[2].drop[2].head}
                     </button>
                   </div>
                 </div>
@@ -252,7 +255,7 @@ export default function PrivacyContext(props: PageProps) {
               {/* Legal */}
               <div
                 className={
-                  expandContext.title === "Legal"
+                  expandContext.title === 3
                     ? `text-${oppositeTheme} p-5 rounded-xl text-center text-lg bg-${theme}-back w-full flex justify-start flex-col gap-y-5 transition-all duration-500 h-fit`
                     : `text-gray text-center text-lg w-full rounded-2xl p-5 bg-${theme}-back  transition-all duration-500 h-fit`
                 }
@@ -261,80 +264,80 @@ export default function PrivacyContext(props: PageProps) {
                   className="w-fit h-fit"
                   onClick={() =>
                     setExpandContext({
-                      title: "Legal",
-                      subTitle: "",
+                      title: 3,
+                      subTitle: 0,
                     })
                   }
                 >
-                  Country Laws We Obide By
+                  {context[3].title}
                 </button>
                 <div className="w-full h-fit flex justify-center">
                   <div
                     className={
-                      expandContext.title === "Legal"
+                      expandContext.title === 3
                         ? `bg-${theme} flex  w-full h-full justify-center items-start flex-col text-${oppositeTheme} transition-all duration-300 rounded-2xl p-4 gap-y-3`
                         : `hidden`
                     }
                   >
                     <button
                       className={
-                        expandContext.subTitle === "Canada"
+                        expandContext.subTitle === 0
                           ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
                           : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
-                          title: "Legal",
-                          subTitle: "Canada",
+                          title: 3,
+                          subTitle: 0,
                         })
                       }
                     >
-                      Canada
+                      {context[3].drop[0].head}
                     </button>
                     <button
                       className={
-                        expandContext.subTitle === "Iran"
+                        expandContext.subTitle === 1
                           ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
                           : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
-                          title: "Legal",
-                          subTitle: "Iran",
+                          title: 3,
+                          subTitle: 1,
                         })
                       }
                     >
-                      Iran
+                      {context[3].drop[1].head}
                     </button>
                     <button
                       className={
-                        expandContext.subTitle === "Afghanistan"
+                        expandContext.subTitle === 2
                           ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
                           : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
-                          title: "Legal",
-                          subTitle: "Afghanistan",
+                          title: 3,
+                          subTitle: 2,
                         })
                       }
                     >
-                      Afghanistan
+                      {context[3].drop[2].head}
                     </button>
                     <button
                       className={
-                        expandContext.subTitle === "Germany"
+                        expandContext.subTitle === 3
                           ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
                           : `text-gray`
                       }
                       onClick={() =>
                         setExpandContext({
-                          title: "Legal",
-                          subTitle: "Germany",
+                          title: 3,
+                          subTitle: 3,
                         })
                       }
                     >
-                      Germany
+                      {context[3].drop[3].head}
                     </button>
                   </div>
                 </div>
@@ -351,7 +354,9 @@ export default function PrivacyContext(props: PageProps) {
                   : `bg-${theme}-glass  p-5 rounded-2xl text-xl text-start h-fit w-fit animate-glowtextDark text-black`
               }
             >
-              {context}
+              {context[expandContext.title].drop[expandContext.subTitle].head +
+                " " +
+                context[expandContext.title].drop[expandContext.subTitle].value}
             </div>
           </div>
         </div>
