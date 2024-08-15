@@ -2,7 +2,6 @@ import { PageProps } from "@/interfaces/PageProps";
 import { ThemeState } from "@/lib/store";
 import { useEffect, useState } from "react";
 export default function PrivacyContext(props: PageProps) {
-  const context = require("./PrivacyContext.json").Context;
   const [expandContext, setExpandContext] = useState({
     title: 0,
     subTitle: 0,
@@ -10,9 +9,7 @@ export default function PrivacyContext(props: PageProps) {
   const { theme, font, lang } = props;
   const oppositeTheme: string =
     theme == ("dark" as ThemeState["theme"]) ? "light" : "dark";
-  useEffect(() => {
-    console.log(expandContext);
-  });
+  const context = lang.indexPrivacyPolicy;
   return (
     <section
       className={`w-full h-full flex justify-between items-center font-${font}-regular`}
@@ -97,21 +94,6 @@ export default function PrivacyContext(props: PageProps) {
                       }
                     >
                       {context[0].drop[2].head}
-                    </button>
-                    <button
-                      className={
-                        expandContext.subTitle === 3
-                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
-                          : `text-gray`
-                      }
-                      onClick={() =>
-                        setExpandContext({
-                          title: 0,
-                          subTitle: 3,
-                        })
-                      }
-                    >
-                      {context[0].drop[3].head}
                     </button>
                   </div>
                 </div>
@@ -248,96 +230,6 @@ export default function PrivacyContext(props: PageProps) {
                       }
                     >
                       {context[2].drop[2].head}
-                    </button>
-                  </div>
-                </div>
-              </div>
-              {/* Legal */}
-              <div
-                className={
-                  expandContext.title === 3
-                    ? `text-${oppositeTheme} p-5 rounded-xl text-center text-lg bg-${theme}-back w-full flex justify-start flex-col gap-y-5 transition-all duration-500 h-fit`
-                    : `text-gray text-center text-lg w-full rounded-2xl p-5 bg-${theme}-back  transition-all duration-500 h-fit`
-                }
-              >
-                <button
-                  className="w-fit h-fit"
-                  onClick={() =>
-                    setExpandContext({
-                      title: 3,
-                      subTitle: 0,
-                    })
-                  }
-                >
-                  {context[3].title}
-                </button>
-                <div className="w-full h-fit flex justify-center">
-                  <div
-                    className={
-                      expandContext.title === 3
-                        ? `bg-${theme} flex  w-full h-full justify-center items-start flex-col text-${oppositeTheme} transition-all duration-300 rounded-2xl p-4 gap-y-3`
-                        : `hidden`
-                    }
-                  >
-                    <button
-                      className={
-                        expandContext.subTitle === 0
-                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
-                          : `text-gray`
-                      }
-                      onClick={() =>
-                        setExpandContext({
-                          title: 3,
-                          subTitle: 0,
-                        })
-                      }
-                    >
-                      {context[3].drop[0].head}
-                    </button>
-                    <button
-                      className={
-                        expandContext.subTitle === 1
-                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
-                          : `text-gray`
-                      }
-                      onClick={() =>
-                        setExpandContext({
-                          title: 3,
-                          subTitle: 1,
-                        })
-                      }
-                    >
-                      {context[3].drop[1].head}
-                    </button>
-                    <button
-                      className={
-                        expandContext.subTitle === 2
-                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
-                          : `text-gray`
-                      }
-                      onClick={() =>
-                        setExpandContext({
-                          title: 3,
-                          subTitle: 2,
-                        })
-                      }
-                    >
-                      {context[3].drop[2].head}
-                    </button>
-                    <button
-                      className={
-                        expandContext.subTitle === 3
-                          ? `bg-blue text-light px-5 rounded-2xl transition-all duration-300 py-1`
-                          : `text-gray`
-                      }
-                      onClick={() =>
-                        setExpandContext({
-                          title: 3,
-                          subTitle: 3,
-                        })
-                      }
-                    >
-                      {context[3].drop[3].head}
                     </button>
                   </div>
                 </div>
