@@ -19,6 +19,7 @@ export default function PrivacyContext(props: PageProps) {
         <div className="opacity-65 absolute z-[0] w-[40%] h-[40%] left-28 rtl:right-28 top-48 blue__gradient" />
 
         <div
+          dir={font!=="Fa"?"ltr":"rtl"}
           className={` bg-${theme} p-5 rounded-2xl w-full h-full grid grid-cols-12 grid-rows-4 bg-transparent gap-y-5 z-[1] gap-x-5`}
         >
           <div className=" row-span-1 md:row-span-4 col-span-12 md:col-span-4  flex flex-row md:flex-col gap-y-10 bg-transparent rounded-2xl">
@@ -242,13 +243,12 @@ export default function PrivacyContext(props: PageProps) {
             <div
               className={
                 theme === ("dark" as ThemeState["theme"])
-                  ? `bg-${theme}-glass  p-5 rounded-2xl text-xl text-start h-fit w-fit animate-glowtextLight text-white`
-                  : `bg-${theme}-glass  p-5 rounded-2xl text-xl text-start h-fit w-fit animate-glowtextDark text-black`
+                  ? `bg-${theme}-glass  p-5 rounded-2xl text-xl text-start h-fit w-fit animate-appear text-white`
+                  : `bg-${theme}-glass  p-5 rounded-2xl text-xl text-start h-fit w-fit animate-appear text-black`
               }
             >
-              {context[expandContext.title].drop[expandContext.subTitle].head +
-                " " +
-                context[expandContext.title].drop[expandContext.subTitle].value}
+             
+                {context[expandContext.title].drop[expandContext.subTitle].value}
             </div>
           </div>
         </div>
