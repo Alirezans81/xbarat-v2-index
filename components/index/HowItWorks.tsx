@@ -63,7 +63,9 @@ export default function HowItWorks(props: PageProps) {
           {lang["index-how-it-works-desc"]}
         </span>
 
-        <Button font={font} lang={lang} theme={theme} />
+        <Button font={font} lang={lang} theme={theme}>
+          {null}
+        </Button>
       </div>
     </section>
   );

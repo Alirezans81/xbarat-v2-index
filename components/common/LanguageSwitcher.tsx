@@ -58,8 +58,6 @@ export default function LanguageSwitcher() {
     findSavedLocale();
   }, []);
 
-  console.log(selectedLocaleIndex);
-
   return (
     <div className="flex items-center">
       {selectedLocale && (

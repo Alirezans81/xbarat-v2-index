@@ -4,7 +4,6 @@ import Link from "next/link";
 import { ThemeState } from "@/lib/store";
 import Button from "./Button";
 import { MutableRefObject, useEffect, useState } from "react";
-import path from "path";
 import Logo from "@/public/images/logo.png";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { usePathname } from "next/navigation";
@@ -17,15 +16,7 @@ export default function Navbar(
     navbarDivRef: MutableRefObject<HTMLDivElement | undefined>;
   }
 ) {
-  const {
-    lang,
-    theme,
-    font,
-    routes,
-    activeRoute,
-    setMenuIsOpen,
-    navbarDivRef,
-  } = props;
+  const { lang, theme, font, routes, setMenuIsOpen, navbarDivRef } = props;
   const pathname = usePathname();
 
   const oppositeTheme: string =
@@ -50,7 +41,7 @@ export default function Navbar(
   }, []);
 
   return (
-    <div
+    <nav
       className={`sticky left-0 top-0 w-[100dvw] flex items-center justify-center transition-all duration-500 z-50 ${
         scrollY === 0 ? `` : `bg-${theme}-back shadow-xl shadow-black/5`
       }`}
@@ -127,6 +118,6 @@ export default function Navbar(
           <Button lang={lang} theme={theme} font={font} />
         </div>
       </div>
-    </div>
+    </nav>
   );
 }

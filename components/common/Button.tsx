@@ -4,8 +4,12 @@ import { PageProps } from "@/interfaces/PageProps";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Button(props: PageProps) {
-  const { font, lang } = props;
+export default function Button(
+  props: PageProps & {
+    children: Readonly<React.ReactNode> | undefined | null;
+  }
+) {
+  const { font, lang, children } = props;
 
   const [bgGradientClass, setBgGradient] = useState("opacity-100");
   const [bgGradientOppositeClass, setBgGradientOpposite] =
@@ -31,7 +35,7 @@ export default function Button(props: PageProps) {
         className={`transition-all duration-300 rounded-lg absolute w-full h-full bg-blue-gradient-opposite ${bgGradientOppositeClass}`}
       />
       <span className={`text-light z-10 ${font === "Fa" ? "" : "-mb-1.5"}`}>
-        {lang["index-go-to-platform-button"]}
+        {children || lang["index-go-to-platform-button"]}
       </span>
     </Link>
   );
