@@ -58,11 +58,11 @@ export default function Page() {
         title: lang["index-privacy-&-policy"],
         route: "/privacy-&-policy",
       },
-      {
-        id: "",
-        title: "Toturial",
-        route: "/toturial",
-      },
+      // {
+      //   id: "",
+      //   title: "Toturial",
+      //   route: "/toturial",
+      // },
     ]);
     setActiveRoute("/");
   }, [lang]);
