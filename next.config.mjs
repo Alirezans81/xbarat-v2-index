@@ -10,7 +10,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "xbarat-back.pro",
+        hostname: "xbarat.com",
         port: "",
         pathname: "/media/**",
       },
