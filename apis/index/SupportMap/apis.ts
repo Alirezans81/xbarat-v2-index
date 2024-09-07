@@ -5,7 +5,6 @@ import dev from "@/apis/api-dev";
 import prod from "@/apis/api";
 
 const api = process.env.NEXT_PUBLIC_APP_MODE === "DEVELOPMENT" ? dev() : prod();
-
 const getSupportLocations = () => {
   const limit = require("../../pagination/limit.json")["support-location"];
 

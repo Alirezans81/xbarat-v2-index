@@ -15,7 +15,6 @@ export default function LandingPrivacy(props: PageProps) {
   const { theme, font, lang } = props;
   const oppositeTheme: string =
     theme == ("dark" as ThemeState["theme"]) ? "light" : "dark";
-
   const typingAnimtionDuration: number = 300;
   const showTypingAnimtionDuration: number = 1000;
 
@@ -43,9 +42,11 @@ export default function LandingPrivacy(props: PageProps) {
 
         <div className="opacity-20 absolute z-[0] w-[60%] h-[60%] rounded-full top-20 left-10 rtl:right-10 light__gradient" />
         <div className="opacity-65 absolute z-[0] w-[40%] h-[40%] left-28 rtl:right-28 top-48 blue__gradient" />
-        <div className="w-full h-fit flex flex-col gap-y-10 -mt-24">
-          <span className={`font-${font}-bold text-blue text-start text-4xl`}>
-            Privacy And Policy
+        <div          
+        className="w-full h-fit flex flex-col gap-y-10 -mt-24">
+          <span
+           className={`font-${font}-bold text-blue text-center text-4xl w-full`}>
+          {lang['privacyPolicy']}
           </span>
           <TypeAnimation
             sequence={[
@@ -82,10 +83,8 @@ export default function LandingPrivacy(props: PageProps) {
               direction: font === "Fa" ? "rtl" : "ltr",
             }}
           >
-            Welcome to Xbarat.We are committed to protecting your privacy and
-            ensuring the security of your personal information. This Privacy
-            Policy explains how we collect, use, and share your data.
-          </span>
+            {lang['privacyLanding']}
+            </span>
         </div>
       </div>
       <div className="w-full relative z-[1] ml-20 hidden lg:block">
