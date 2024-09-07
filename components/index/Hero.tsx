@@ -94,7 +94,9 @@ export default function Hero(props: PageProps) {
           >
             {lang["index-xbarat-desc"]}
           </span>
-          <Button font={font} lang={lang} theme={theme} />
+          <Button font={font} lang={lang} theme={theme}>
+            {null}
+          </Button>
         </div>
       </div>
 

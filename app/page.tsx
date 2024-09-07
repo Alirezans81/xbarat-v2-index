@@ -58,6 +58,11 @@ export default function Page() {
         title: lang["index-privacy-&-policy"],
         route: "/privacy-&-policy",
       },
+      {
+        id: "",
+        title: "Toturial",
+        route: "/toturial",
+      },
     ]);
     setActiveRoute("/");
   }, [lang]);
@@ -75,6 +80,7 @@ export default function Page() {
             isLoading ? "overflow-hidden" : "overflow-y-auto overflow-x-hidden"
           }`}
         >
+          
           <Navbar
             lang={lang}
             font={font}
@@ -85,57 +91,25 @@ export default function Page() {
             navbarDivRef={navbarDivRef}
           />
 
-          <div className="w-full flex justify-center">
+          <header className="w-full flex justify-center">
             <div className="max-w-[1280px] px-[7%] xl:px-0">
-              <Hero
-                lang={lang}
-                font={font}
-                theme={theme}
-              />
+              <Hero lang={lang} font={font} theme={theme} />
             </div>
-          </div>
+          </header>
 
-          <Agencies
-            lang={lang}
-            font={font}
-            theme={theme}
-          />
+          <Agencies lang={lang} font={font} theme={theme} />
 
           <div className={`w-full flex justify-center overflow-hidden`}>
             <div className="max-w-[1280px] px-[7%] xl:px-0 flex flex-col gap-y-20 py-16">
-              <HowItWorks
-                lang={lang}
-                font={font}
-                theme={theme}
-              />
-              <Features
-                lang={lang}
-                font={font}
-                theme={theme}
-              />
-              <SocialMedia
-                lang={lang}
-                font={font}
-                theme={theme}
-              />
-              <Journey
-                lang={lang}
-                font={font}
-                theme={theme}
-              />
-              <SupportMap
-                lang={lang}
-                font={font}
-                theme={theme}
-              />
+              <HowItWorks lang={lang} font={font} theme={theme} />
+              <Features lang={lang} font={font} theme={theme} />
+              <SocialMedia lang={lang} font={font} theme={theme} />
+              <Journey lang={lang} font={font} theme={theme} />
+              <SupportMap lang={lang} font={font} theme={theme} />
             </div>
           </div>
 
-          <Footer
-            lang={lang}
-            font={font}
-            theme={theme}
-          />
+          <Footer lang={lang} font={font} theme={theme} />
         </div>
       </div>
     );

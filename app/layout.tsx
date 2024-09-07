@@ -36,7 +36,7 @@ export default function RootLayout({
         >
           <Image
             alt="Goftino Button"
-            src={require("./ticket.png")}
+            src={require("./support.png")}
             width={35}
             height={35}
           />
