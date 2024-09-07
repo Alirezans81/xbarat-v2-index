@@ -115,7 +115,9 @@ export default function Navbar(
             ))}
           </div>
 
-          <Button lang={lang} theme={theme} font={font} />
+          <Button lang={lang} theme={theme} font={font}>
+            {""}
+          </Button>
         </div>
       </div>
     </nav>
