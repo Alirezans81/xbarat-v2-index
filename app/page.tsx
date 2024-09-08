@@ -13,7 +13,7 @@ import {
 import Image from "next/image";
 
 import Logo from "@/public/images/logo.png";
-import Agencies from "@/components/index/Agencies";
+import Agencies from "@/components/index/CurrencyPairRates";
 import HowItWorks from "@/components/index/HowItWorks";
 import Features from "@/components/index/Features";
 import SocialMedia from "@/components/index/SocialMedia";
