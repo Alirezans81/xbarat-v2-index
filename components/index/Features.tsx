@@ -9,32 +9,32 @@ export default function Features(props: PageProps) {
 
   const features = [
     {
-      icon: require("@/public/images/index/Agencies/pin.png"),
+      icon: require("@/public/images/index/Features/pin.png"),
       title: lang["index-features-security-title"],
       desc: lang["index-features-security-desc"],
     },
     {
-      icon: require("@/public/images/index/Agencies/pin.png"),
+      icon: require("@/public/images/index/Features/pin.png"),
       title: lang["index-features-easy-transfer-title"],
       desc: lang["index-features-easy-transfer-desc"],
     },
     {
-      icon: require("@/public/images/index/Agencies/pin.png"),
+      icon: require("@/public/images/index/Features/pin.png"),
       title: lang["index-features-high-transaction-speed-title"],
       desc: lang["index-features-high-transaction-speed-desc"],
     },
     {
-      icon: require("@/public/images/index/Agencies/pin.png"),
+      icon: require("@/public/images/index/Features/pin.png"),
       title: lang["index-features-low-fees-title"],
       desc: lang["index-features-low-fees-desc"],
     },
     {
-      icon: require("@/public/images/index/Agencies/pin.png"),
+      icon: require("@/public/images/index/Features/pin.png"),
       title: lang["index-features-freedom-of-rate-title"],
       desc: lang["index-features-freedom-of-rate-desc"],
     },
     {
-      icon: require("@/public/images/index/Agencies/pin.png"),
+      icon: require("@/public/images/index/Features/pin.png"),
       title: lang["index-features-support-languages-title"],
       desc: lang["index-features-support-languages-desc"],
     },

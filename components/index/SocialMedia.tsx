@@ -13,17 +13,17 @@ export default function SocialMedia(props: PageProps) {
 
   const socialMediaFeatures = [
     {
-      icon: require("@/public/images/index/Agencies/pin.png"),
+      icon: require("@/public/images/index/Features/pin.png"),
       title: lang["index-social-media-desc-1-title"],
       desc: lang["index-social-media-desc-1-desc"],
     },
     {
-      icon: require("@/public/images/index/Agencies/pin.png"),
+      icon: require("@/public/images/index/Features/pin.png"),
       title: lang["index-social-media-desc-2-title"],
       desc: lang["index-social-media-desc-2-desc"],
     },
     {
-      icon: require("@/public/images/index/Agencies/pin.png"),
+      icon: require("@/public/images/index/Features/pin.png"),
       title: lang["index-social-media-desc-3-title"],
       desc: lang["index-social-media-desc-3-desc"],
     },

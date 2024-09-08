@@ -6,6 +6,7 @@ import Link from "next/link";
 import Logo from "@/public/images/logo.png";
 import Enamad from "@/public/images/common/enamad.png";
 import GooglePlay from "@/public/images/common/google-play-badge.png";
+import { Tooltip } from "react-tooltip";
 
 export default function Footer(props: PageProps) {
   const { theme, lang, font } = props;
@@ -128,7 +129,7 @@ export default function Footer(props: PageProps) {
 
         <div className="col-span-6 sm:col-span-4 md:col-span-3 xl:col-span-2 flex flex-col gap-y-5">
           <div
-            className={`flex-1 flex flex-col bg-${theme}-mahtisa p-5 rounded-xl w-full`}
+            className={`flex-1 flex flex-col gap-y-1 bg-${theme}-mahtisa p-5 rounded-xl w-full`}
           >
             <span
               className={`text-blue font-${font}-bold text-lg`}
@@ -139,7 +140,116 @@ export default function Footer(props: PageProps) {
             >
               {lang["index-social-links"]}
             </span>
-            <div className="flex items-center gap-x-2"></div>
+            <div className="flex flex-wrap items-center gap-4 mt-2.5">
+              <Link
+                id="instgram-link"
+                href="https://www.instagram.com/xbarat.team?igsh=MXEzZTRucjBybmx5Zw=="
+              >
+                <Image
+                  alt="Instagram"
+                  src={require("@/public/images/index/Footer/instagram.png")}
+                  className="w-7 h-7"
+                />
+              </Link>
+              <Tooltip
+                anchorSelect="#instgram-link"
+                style={{
+                  backgroundColor: "#fff",
+                  borderRadius: 10,
+                  color: "#2A2B2E",
+                  zIndex: 100,
+                  backdropFilter: "none",
+                }}
+              >
+                {lang["index-instagram"]}
+              </Tooltip>
+
+              <Link id="telegram-link" href="https://t.me/xbaratteam_rate">
+                <Image
+                  alt="Telegram"
+                  src={require("@/public/images/index/Footer/telegram.png")}
+                  className="w-7 h-7"
+                />
+              </Link>
+              <Tooltip
+                anchorSelect="#telegram-link"
+                style={{
+                  backgroundColor: "#fff",
+                  borderRadius: 10,
+                  color: "#2A2B2E",
+                  zIndex: 100,
+                  backdropFilter: "none",
+                }}
+              >
+                {lang["index-telegram"]}
+              </Tooltip>
+
+              <Link id="whats-app-link" href="https://wa.me/989360758639">
+                <Image
+                  alt="WhatsApp"
+                  src={require("@/public/images/index/Footer/whats-app.png")}
+                  className="w-7 h-7"
+                />
+              </Link>
+              <Tooltip
+                anchorSelect="#whats-app-link"
+                style={{
+                  backgroundColor: "#fff",
+                  borderRadius: 10,
+                  color: "#2A2B2E",
+                  zIndex: 100,
+                  backdropFilter: "none",
+                }}
+              >
+                {lang["index-whats-app"]}
+              </Tooltip>
+
+              <Link
+                id="x-link"
+                href="https://x.com/xbaratteam?t=KcuxFsnaTcYGAeKeSBg9EA&s=09"
+              >
+                <Image
+                  alt="X"
+                  src={require("@/public/images/index/Footer/x.png")}
+                  className="w-7 h-7"
+                />
+              </Link>
+              <Tooltip
+                anchorSelect="#x-link"
+                style={{
+                  backgroundColor: "#fff",
+                  borderRadius: 10,
+                  color: "#2A2B2E",
+                  zIndex: 100,
+                  backdropFilter: "none",
+                }}
+              >
+                {lang["index-x"]}
+              </Tooltip>
+
+              <Link
+                id="facebook-link"
+                href="https://www.facebook.com/xbarat.team?mibextid=ZbWKwL"
+              >
+                <Image
+                  alt="Facebook"
+                  src={require("@/public/images/index/Footer/facebook.png")}
+                  className="w-7 h-7"
+                />
+              </Link>
+              <Tooltip
+                anchorSelect="#facebook-link"
+                style={{
+                  backgroundColor: "#fff",
+                  borderRadius: 10,
+                  color: "#2A2B2E",
+                  zIndex: 100,
+                  backdropFilter: "none",
+                }}
+              >
+                {lang["index-facebook"]}
+              </Tooltip>
+            </div>
           </div>
           <div
             className={`flex-1 flex justify-center items-center bg-${theme}-mahtisa rounded-xl w-full`}
