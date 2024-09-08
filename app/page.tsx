@@ -80,7 +80,6 @@ export default function Page() {
             isLoading ? "overflow-hidden" : "overflow-y-auto overflow-x-hidden"
           }`}
         >
-          
           <Navbar
             lang={lang}
             font={font}
