@@ -56,7 +56,13 @@ export default function PrivacyPolicy() {
   if (lang && font && theme && routes && activeRoute) {
     return (
       <div className={`absolute w-100vw h-100vh bg-${theme} flex flex-col`}>
-        <SlideMenu isOpen={menuIsOpen} onClose={() => setMenuIsOpen(false)} />
+        <SlideMenu
+          isOpen={menuIsOpen}
+          onClose={() => setMenuIsOpen(false)}
+          font={font}
+          theme={theme}
+          lang={lang}
+        />
         <div
           dir={font === "Fa" ? "rtl" : "ltr"}
           id="page-wrap"
@@ -76,20 +82,12 @@ export default function PrivacyPolicy() {
           />
           <div className="w-full flex justify-center ">
             <div className="max-w-[1280px] px-[7%] xl:px-0 pt-20 lg:pt-0">
-              <LandingPrivacy
-                lang={lang}
-                font={font}
-                theme={theme}
-              />
+              <LandingPrivacy lang={lang} font={font} theme={theme} />
             </div>
           </div>
           <div className="w-full flex justify-center ">
             <div className="max-w-[1280px] px-[7%] xl:px-0 pb-0">
-              <PrivacyContext
-                lang={lang}
-                font={font}
-                theme={theme}
-              />
+              <PrivacyContext lang={lang} font={font} theme={theme} />
             </div>
           </div>
         </div>

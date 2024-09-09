@@ -98,12 +98,6 @@ body {
   src: url("./fonts/Fa/ModamFaNum-Thin.ttf");
 }
 
-@media only screen and (max-width: 768px) {
-  #new_widget_button {
-    bottom: 102px !important;
-  }
-}
-
 .font-En-bold {
   font-family: manjari-bold;
 }

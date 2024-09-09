@@ -62,7 +62,13 @@ export default function Toturial() {
   if (lang && font && theme && routes && activeRoute) {
     return (
       <div className={`absolute w-100vw h-100vh bg-${theme} flex flex-col`}>
-        <SlideMenu isOpen={menuIsOpen} onClose={() => setMenuIsOpen(false)} />
+        <SlideMenu
+          isOpen={menuIsOpen}
+          onClose={() => setMenuIsOpen(false)}
+          font={font}
+          theme={theme}
+          lang={lang}
+        />
         <div
           dir={font === "Fa" ? "rtl" : "ltr"}
           id="page-wrap"

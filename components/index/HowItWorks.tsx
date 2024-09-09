@@ -59,7 +59,7 @@ export default function HowItWorks(props: PageProps) {
           </span>
         </div>
 
-        <span className="text-gray text-lg text-center sm:text-start">
+        <span className="text-gray text-lg text-center sm:text-start me-5">
           {lang["index-how-it-works-desc"]}
         </span>
 
