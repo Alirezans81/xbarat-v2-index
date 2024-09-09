@@ -74,7 +74,7 @@ export default function SocialMedia(props: PageProps) {
             {lang["index-social-media"]}
           </span>
           <span
-            className={`text-${oppositeTheme} text-3xl sm:text-4xl md:text-5xl lg:text-6xl `}
+            className={`text-${oppositeTheme} text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center`}
           >
             {lang["index-social-media-title"]}
           </span>
@@ -104,7 +104,7 @@ export default function SocialMedia(props: PageProps) {
                   {feature.title}
                 </span>
               </div>
-              <span className="text-gray">{feature.desc}</span>
+              <span className="text-gray text-center">{feature.desc}</span>
             </div>
           ))}
         </div>

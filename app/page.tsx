@@ -70,7 +70,13 @@ export default function Page() {
   if (lang && font && theme && routes && activeRoute) {
     return (
       <div id="outer-container">
-        <SlideMenu isOpen={menuIsOpen} onClose={() => setMenuIsOpen(false)} />
+        <SlideMenu
+          isOpen={menuIsOpen}
+          onClose={() => setMenuIsOpen(false)}
+          font={font}
+          theme={theme}
+          lang={lang}
+        />
 
         <div
           dir={font === "Fa" ? "rtl" : "ltr"}
