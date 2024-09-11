@@ -19,9 +19,7 @@ export default function LandingPrivacy(props: PageProps) {
   const showTypingAnimtionDuration: number = 1000;
 
   return (
-    <section
-      className={`w-full flex justify-between items-center mt-10 font-${font}-regular`}
-    >
+    <section className="w-full flex justify-between items-center mt-10">
       <div className="w-full flex flex-col relative gap-y-10 sm:gap-y-28 mb-10 lg:mb-0">
         <Image
           alt="Arrow"
@@ -30,7 +28,7 @@ export default function LandingPrivacy(props: PageProps) {
               ? ArrowRight
               : font === "Fa" && theme === ("light" as ThemeState["theme"])
               ? ArrowRightDark
-              : font === "En" && theme === ("light" as ThemeState["theme"])
+              : font !== "Fa" && theme === ("light" as ThemeState["theme"])
               ? ArrowLeftDark
               : ArrowLeft
           }
@@ -39,41 +37,49 @@ export default function LandingPrivacy(props: PageProps) {
           rotate-3 hover:rotate-12 sm:left-72 left-44 top-20
           w-[150px] sm:w-auto`}
         />
+        <div className="opacity-70 absolute z-[0] w-[80%] h-[80%] rounded-full top-0 left-0 light__gradient" />
+        <div className="opacity-35 absolute z-[0] w-[50%] h-[50%] left-20 top-0 blue__gradient" />
 
-        <div className="opacity-20 absolute z-[0] w-[60%] h-[60%] rounded-full top-20 left-10 rtl:right-10 light__gradient" />
-        <div className="opacity-65 absolute z-[0] w-[40%] h-[40%] left-28 rtl:right-28 top-48 blue__gradient" />
-        <div          
-        className="w-full h-fit flex flex-col gap-y-10 -mt-24">
-          <span
-           className={`font-${font}-bold text-blue text-center text-4xl w-full`}>
-          {lang['privacyPolicy']}
-          </span>
-          <TypeAnimation
-            sequence={[
-              lang["slogan"] + ".", // Types 'One'
-              showTypingAnimtionDuration,
-              () => {},
-              lang["slogan"] + "..", // Types 'Two'
-              showTypingAnimtionDuration,
-              () => {},
-              lang["slogan"] + "...", // Types 'Three'
-              showTypingAnimtionDuration,
-              () => {},
-              "", // Types 'One'
-              typingAnimtionDuration,
-              () => {},
-            ]}
-            speed={50}
-            wrapper="h2"
-            cursor={true}
-            repeat={Infinity}
-            style={{
-              textAlign: "start",
-              direction: font === "Fa" ? "rtl" : "ltr",
-            }}
-            className={`z-[1] sm:max-w-[30rem] rtl:sm:max-w-[32rem] text-5xl sm:text-7xl h-[11rem] leading-[3.5rem] sm:leading-[5rem] flex flex-col text-${oppositeTheme} font-${font}-regular`}
-          />
-        </div>
+        <TypeAnimation
+          sequence={[
+            (lang["slogan"] ||
+              (font === "Fa"
+                ? "وقتی خودت کافی هستی"
+                : font === "En"
+                ? "When you are enough"
+                : "")) + ".", // Types 'One'
+            showTypingAnimtionDuration,
+            () => {},
+            (lang["slogan"] ||
+              (font === "Fa"
+                ? "وقتی خودت کافی هستی"
+                : font === "En"
+                ? "When you are enough"
+                : "")) + "..", // Types 'Two'
+            showTypingAnimtionDuration,
+            () => {},
+            (lang["slogan"] ||
+              (font === "Fa"
+                ? "وقتی خودت کافی هستی"
+                : font === "En"
+                ? "When you are enough"
+                : "")) + "...", // Types 'Three'
+            showTypingAnimtionDuration,
+            () => {},
+            "", // Types 'One'
+            typingAnimtionDuration,
+            () => {},
+          ]}
+          speed={50}
+          wrapper="h2"
+          cursor={true}
+          repeat={Infinity}
+          style={{
+            textAlign: "start",
+            direction: font === "Fa" ? "rtl" : "ltr",
+          }}
+          className={`z-[1] sm:max-w-[30rem] rtl:sm:max-w-[32rem] text-5xl sm:text-7xl h-[11rem] leading-[3.5rem] sm:leading-[5rem] flex flex-col text-${oppositeTheme} font-${font}-regular`}
+        />
 
         <div className="flex flex-col gap-y-5 z-[1]">
           <span
@@ -83,10 +89,14 @@ export default function LandingPrivacy(props: PageProps) {
               direction: font === "Fa" ? "rtl" : "ltr",
             }}
           >
-            {lang['privacyLanding']}
-            </span>
+            {lang["index-xbarat-desc"]}
+          </span>
+          <Button font={font} lang={lang} theme={theme}>
+            {null}
+          </Button>
         </div>
       </div>
+
       <div className="w-full relative z-[1] ml-20 hidden lg:block">
         <Image
           alt="star"
@@ -106,9 +116,11 @@ export default function LandingPrivacy(props: PageProps) {
         <Image
           alt="Hero Photo"
           src={PrivacLandingPhoto}
-          className="w-[500px] xlg:w-[600px] h-[500px] xlg:h-[600px] object-cover z-[1] p-20"
+          className="w-[500px] xlg:w-[600px] h-[500px] xlg:h-[600px] object-cover z-[1] p-10"
         />
       </div>
     </section>
+
+
   );
 }

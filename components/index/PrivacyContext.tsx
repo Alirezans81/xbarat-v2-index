@@ -9,10 +9,11 @@ export default function PrivacyContext(props: PageProps) {
   const { theme, font, lang } = props;
   const oppositeTheme: string =
     theme == ("dark" as ThemeState["theme"]) ? "light" : "dark";
-  const context = lang?.indexPrivacyPolicy || {};
+  // const context = lang?.indexPrivacyPolicy || {};
+  const context=require("./En.json").indexPrivacyPolicy
   return (
     <section
-      className={`w-full h-full flex justify-between items-center font-${font}-regular`}
+      className={`w-full h-full flex justify-between items-center font-${font}-regular min-w-[1280px]`}
     >
       <div className="w-full h-full flex flex-col relative gap-y-10 sm:gap-y-28 mb-10 lg:mb-0 ">
         <div className="opacity-20 absolute z-[0] w-[60%] h-[60%] rounded-full top-20 left-10 rtl:right-10 light__gradient" />
@@ -243,8 +244,8 @@ export default function PrivacyContext(props: PageProps) {
             <div
               className={
                 theme === ("dark" as ThemeState["theme"])
-                  ? `bg-${theme}-glass  p-5 rounded-2xl text-xl text-start h-fit w-fit animate-appear text-white`
-                  : `bg-${theme}-glass  p-5 rounded-2xl text-xl text-start h-fit w-fit animate-appear text-black`
+                  ? `bg-${theme}-glass  p-5 rounded-2xl text-xl text-start h-fit w-full animate-appear text-white`
+                  : `bg-${theme}-glass  p-5 rounded-2xl text-xl text-start h-fit w-full animate-appear text-black`
               }
             >
               {
