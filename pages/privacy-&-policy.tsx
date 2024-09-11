@@ -55,7 +55,7 @@ export default function PrivacyPolicy() {
   }, [lang]);
   if (lang && font && theme && routes && activeRoute) {
     return (
-      <div className={`absolute w-100vw h-100vh bg-${theme} flex flex-col`}>
+      <div  className={`absolute w-100vw h-100vh bg-${theme} flex flex-col`}>
         <SlideMenu
           isOpen={menuIsOpen}
           onClose={() => setMenuIsOpen(false)}
@@ -80,7 +80,7 @@ export default function PrivacyPolicy() {
             setMenuIsOpen={setMenuIsOpen}
             navbarDivRef={navbarDivRef}
           />
-          <div className="w-full flex justify-center ">
+          <div  className="w-full flex justify-center ">
             <div className="max-w-[1280px] px-[7%] xl:px-0 pt-20 lg:pt-0">
               <LandingPrivacy lang={lang} font={font} theme={theme} />
             </div>
