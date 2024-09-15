@@ -12,6 +12,7 @@ import {
 } from "@/lib/store";
 import { useEffect, useState } from "react";
 import { Tooltip } from "react-tooltip";
+import { isNumberObject } from "util/types";
 
 export default function LanguageSwitcher() {
   const setLoading = useLoadingStore((state) => state.setLoading);
@@ -40,19 +41,43 @@ export default function LanguageSwitcher() {
         () => {
           location.reload();
         },
-        setLang
+        setLang,
+        () => {
+          window.localStorage.setItem("selectedLocaleIndex", "");
+          location.reload();
+        }
       );
     }
   }, [selectedLocaleIndex]);
 
   const findSavedLocale = () => {
-    const savedSelectedLocaleIndex: number | null = window.localStorage.getItem(
-      "selectedLocaleIndex"
-    ) as unknown as number;
+    const savedSelectedLocaleIndex: number | string | null =
+      window.localStorage.getItem("selectedLocaleIndex") as unknown as
+        | number
+        | string;
 
-    savedSelectedLocaleIndex !== null && savedSelectedLocaleIndex !== undefined
-      ? setSelectedLocale(locales[savedSelectedLocaleIndex])
-      : setSelectedLocale(locales[0]);
+    if (typeof savedSelectedLocaleIndex === "number") {
+      savedSelectedLocaleIndex !== null &&
+      savedSelectedLocaleIndex !== undefined
+        ? setSelectedLocale(locales[savedSelectedLocaleIndex])
+        : setSelectedLocale(locales[0]);
+    } else {
+      setSelectedLocale({
+        url: "string",
+        icon_url: "string",
+        title: "English",
+        symbol: "string",
+        icon: require("@/languages/En.png"),
+        file: "string",
+        font_1: "string",
+        font_2: "string",
+        slug: "string",
+        LTR_direction: true,
+        show_order: 1,
+        is_active: true,
+      });
+      setLang(require("@/languages/En.json"));
+    }
   };
   useEffect(() => {
     findSavedLocale();

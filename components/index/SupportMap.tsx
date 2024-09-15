@@ -75,11 +75,6 @@ function Marker(
             className={`flex flex-col items-center gap-y-2 font-${font}-bold`}
           >
             <div className="flex justify-center gap-x-2 items-center border-b border-gray w-full pb-2">
-              <Image
-                alt={country_title + " icon"}
-                src={require("@/public/images/index/Map/ca.png")}
-                className="w-6 h-6"
-              />
               <span className={`text-${theme} text-lg text-center -mb-2`}>
                 {country_title}
               </span>
