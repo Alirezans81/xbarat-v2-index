@@ -41,7 +41,8 @@ const useGetLocaleFile = () => {
     fileUrl: string,
     setState: (data: {}) => void,
     customFunction?: () => void,
-    customFunctionWithData?: (data: {}) => void
+    customFunctionWithData?: (data: {}) => void,
+    onError?: (error: any) => void
   ) => {
     setIsLoading(true);
     await getLocaleFile(fileUrl)
@@ -55,6 +56,7 @@ const useGetLocaleFile = () => {
       })
       .catch((error) => {
         console.log(error);
+        onError && onError(error);
         setError(error);
         setIsLoading(false);
       });

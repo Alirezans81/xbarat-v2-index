@@ -1,0 +1,378 @@
+{
+  "loading": "Wird geladen...",
+  "logo-header": "Xbarat",
+  "slogan": "Wenn du genug bist",
+  "complete-profile": "Vollständiges Profil",
+  "log-out": "Ausloggen",
+  "email": "Email",
+  "password": "Passwort",
+  "log-in": "Anmeldung",
+  "sign-up": "Melden Sie sich an",
+  "submit": "Einreichen",
+  "exchange": "Austausch",
+  "remember-me": "Erinnere dich an mich",
+  "forgot-password": "Passwort vergessen?",
+  "not-logged-in-error": "Sie sollten angemeldet sein, um auf diese Seite zugreifen zu können",
+  "email-empty-error": "Geben sie ihre E-Mailadresse ein",
+  "email-invalid-error": "Geben sie eine gültige E-Mail-Adresse an",
+  "password-empty-error": "Geben Sie Ihr Passwort ein",
+  "password-short-error": "Das Passwort sollte mindestens 8 Zeichen lang sein",
+  "password-contain-error": "Das Passwort sollte eines der folgenden Zeichen enthalten: [a-z], [A-Z], [0-9], [!@#$%*?]",
+  "password-match-error": "Passwort stimmt nicht überein",
+  "home": "Heim",
+  "wallet": "Geldbörse",
+  "reports": "Berichte",
+  "tickets": "Tickets",
+  "main-routes-title": "Hauptsächlich",
+  "submitting-routes-title": "Einreichen",
+  "user-management-routes-title": "Benutzerverwaltung  ",
+  "currency-routes-title": "Währung",
+  "more-routes-title": "Mehr",
+  "assignment": "Abtretung",
+  "exchanges": "Austausch",
+  "transfers": "Überweisungen",
+  "accounting": "Buchhaltung",
+  "users": "Benutzer",
+  "admins": "Admins",
+  "branches": "Geäst",
+  "singular": "Singular",
+  "pair": "Paar",
+  "robots": "Roboter",
+  "pending": "Ausstehend",
+  "locked": "Gesperrt",
+  "source": "Quelle",
+  "target": "Ziel",
+  "amount": "Menge",
+  "rate": "Rate",
+  "empty-fields-error": "Bitte füllen Sie alle Felder aus",
+  "select-currency-error": "Wählen Sie Ihre Quell- und Zielwährung aus",
+  "currency-pair": "Währungspaar",
+  "pending-orders": "Ausstehende Bestellungen",
+  "edit": "Bearbeiten",
+  "cancel": "Stornieren",
+  "no-data": "Keine Daten",
+  "open-orders": "offene Bestellungen",
+  "done-orders": "erledigte Befehle",
+  "today-orders": "Heute-Bestellungen  ",
+  "other-exchanges": "Andere Börsen",
+  "first-name": "Vorname",
+  "last-name": "Nachname",
+  "phone": "Telefon",
+  "change-password": "Kennwort ändern  ",
+  "phone-number": "Telefonnummer",
+  "nationality": "Staatsangehörigkeit",
+  "country": "Land",
+  "city": "Stadt",
+  "national-code": "Nationaler Code",
+  "document": "Dokumentieren",
+  "current-password": "Aktuelles Passwort",
+  "new-password": "Neues Kennwort",
+  "confirm-password": "Bestätige das Passwort",
+  "referral-code-placeholder": "Empfehlungscode (optional)",
+  "last-tickets": "Letzte Tickets",
+  "ticket-new-message": "Du hast eine neue Nachricht",
+  "ticket-ended": "Beendet",
+  "ticket-sended-message": "Sie haben eine Nachricht gesendet",
+  "complete-profile-message": "Bitte klicken Sie hier, um Ihr Profil zu vervollständigen",
+  "deposit": "Einzahlung",
+  "currency": "Währung",
+  "location": "Standort",
+  "last-deposit": "Letzte Einzahlung",
+  "in": "in",
+  "new": "Neu",
+  "admin-approve": "Administratorgenehmigung",
+  "reject": "Ablehnen",
+  "accept": "Akzeptieren",
+  "your-balance": "Dein Kontostand",
+  "admin-assign": "Admin-Zuweisung",
+  "upload-document": "Dokument hochladen",
+  "transfer": "Überweisen",
+  "withdrawal": "Rückzug",
+  "pending-requests": "offene Anfragen",
+  "only-deposits": "Nur Einzahlungen",
+  "only-withdrawals": "Nur Auszahlungen",
+  "only-transfers": "Nur Überweisungen",
+  "admin-approve-message": "Bitte warten Sie, bis der Administrator die Genehmigung erteilt hat",
+  "upload-document-message": "Bitte gehen Sie zu den Details und laden Sie Ihr Dokument hoch",
+  "admin-assign-message": "Bitte warten Sie, bis der Administrator die Zuweisung vorgenommen hat",
+  "history": "Geschichte",
+  "to": "zu",
+  "404-page-title": "UH OH! Du bist verloren",
+  "404-page-description-1st": "TDie gesuchte Seite existiert nicht. Wie Sie hierher gekommen sind, ist ein Rätsel",
+  "404-page-description-2nd": "Sie können jedoch auf die Schaltfläche unten klicken, um wieder auf den richtigen Weg zu kommen",
+  "date-&-time": "Terminzeit",
+  "pick": "Wählen",
+  "verifying-phone-number": "Überprüfen der Telefonnummer",
+  "sended-otp-code-message-1st": "Wir haben einen Code an Ihre Telefonnummer gesendet",
+  "sended-otp-code-message-2nd": "Bitte geben Sie den Code unten ein",
+  "otp-code": "OTP-Code",
+  "resend": "Erneut senden",
+  "wait-link-message": "Bitte gehen Sie zu Ihrer E-Mail und klicken Sie auf den Link, den wir Ihnen gesendet haben",
+  "personal-information": "Persönliche Angaben",
+  "national-information": "Nationale Informationen",
+  "bank-information": "Bank Informationen",
+  "note": "Notiz",
+  "skip": "Überspringen",
+  "next": "Nächste",
+  "done": "Erledigt",
+  "complete-profile-modal-step1-note-1st": "Um ein Benutzerkonto zu erstellen, muss Ihre Kontaktnummer im System registriert sein",
+  "complete-profile-modal-step1-note-2nd": "Um ein Benutzerkonto zu erstellen, hängen Ihr Konto und die Sicherheit Ihres Kontos sowie die Benachrichtigungen über Ihre Kontovorgänge von dieser Kontaktnummer ab",
+  "complete-profile-modal-step1-note-3rd": "Wenn Sie jemals Ihr Passwort vergessen haben, können Sie Ihr Passwort nur über Ihre Nummer wiederherstellen",
+  "complete-profile-modal-step2-note-1st": "Um ein ordnungsgemäßes Ausweisdokument zu erhalten, müssen wir Ihre Nationalität kennen",
+  "complete-profile-modal-step2-note-2nd": "Außerdem benötigen wir Ihren Standort, um herauszufinden, wie wir zusammenarbeiten werden",
+  "type-of-identity-document": "Art des Ausweisdokuments",
+  "number-of-document": "Nummer des Dokuments",
+  "upload-your-document": "Laden Sie Ihr Dokument hoch",
+  "complete-profile-modal-step3-note-1st": "Um Ihr Konto zu authentifizieren und zu sichern, müssen Sie den Typ Ihres Ausweisdokuments angeben",
+  "complete-profile-modal-step3-note-2nd": "Geben Sie anschließend die Nummer Ihres Dokuments ein, damit unsere Administratoren Ihr Konto so schnell wie möglich genehmigen können",
+  "card-number": "Kartennummer",
+  "shaba-number": "Shaba-Nummer",
+  "paypal-email": "Paypal-E-Mail",
+  "complete-profile-modal-step4-note-1st": "Um Ihr Geld auf Ihr echtes Konto zu überweisen, benötigen wir einige Informationen darüber",
+  "complete-profile-modal-step4-note-2nd": "Kartennummer ist für Zeiten, in denen das Geld nicht viel ist",
+  "complete-profile-modal-step4-note-3rd": "Und die Shaba-Nummer steht für die Zeit, in der wir Ihnen einen großen Geldbetrag schicken möchten",
+  "complete-profile-modal-step5-note-1st": "Vielen Dank für die Vervollständigung Ihres Profils",
+  "complete-profile-modal-step5-note-2nd": "Bitte warten Sie auf die Genehmigung durch den Administrator",
+  "person-code": "Personencode",
+  "from-date": "Ab Datum",
+  "until-date": "Bis zum Datum",
+  "assign": "Zuordnen",
+  "type-of-document": "Art des Dokuments",
+  "bank-account": "Bankkonto",
+  "bank-account-title": "Titel des Bankkontos",
+  "bank-account-number": "Kontonummer",
+  "transaction": "Transaktion",
+  "user-code": "Benutzercode",
+  "pending-request": "Ausstehende Anfrage",
+  "are-you-sure-modal-title": "Bist du sicher",
+  "yes": "Ja",
+  "cancel-request-modal-message": "Sind Sie sicher, dass Sie die Anfrage abbrechen möchten?",
+  "cancel-exchange-modal-message": "Sind Sie sicher, dass Sie den Umtausch abbrechen möchten?",
+  "accept-transaction-message": "Ihre Transaktion wurde erfolgreich durchgeführt",
+  "not-enough-balance-error": "Du hast nicht genug Geld",
+  "low-amount-error": "Ihr Betrag muss mehr sein",
+  "high-amount-error": "Ihr Betrag muss kleiner sein als",
+  "not-in-range-rate-error-1st": "Ihr Tarif muss dazwischen liegen",
+  "not-in-range-rate-error-&": "&",
+  "not-in-range-rate-error-2nd": "",
+  "watch-list-label": "Betrachten",
+  "quantity": "Menge",
+  "low": "Niedrig",
+  "high": "Hoch",
+  "cards-profile": "Karten",
+  "account_name_null_cards": "Titel",
+  "bank_name_null_cards": "Bank name",
+  "bank_info_null_cards": "0000 0000 0000 0000",
+  "wallet_tank_type_title_null_cards": "Karte ODER Shaba-Nummer",
+  "add_cards_title": "Titel",
+  "cards_card_number": "Kartennummer",
+  "cards_shaba_number": "Shaba-Nummer",
+  "cards_card_number_placeholder": "0000 0000 0000 0000",
+  "cards_shaba_number_placeholder": "IR-000000000000000000000000",
+  "choose_add_currency_cards_add_asset": "Bitte wählen Sie die gewünschte Währung aus",
+  "referral-code": "Referenzcode",
+  "copied": "kopiert",
+  "code": "Code",
+  "code-sended-to-email-message-1st": "Wir haben einen Code an Ihre E-Mail-Adresse gesendet",
+  "code-sended-to-email-message-2nd": "Geben Sie hier den Code ein",
+  "email-varification-subject": "E-Mail-Variation",
+  "email-varification-message": "Ihr Code ist",
+  "email-varification-code-error": "Der Code war nicht korrekt",
+  "email-not-exist-error-message": "Die E-Mail existiert nicht",
+  "forgot-password-label": "Passwort vergessen",
+  "profile": "Profil",
+  "successful-signup-1st": "Ihr Konto wurde erfolgreich angemeldet",
+  "successful-signup-2nd": "Bitte versuchen Sie jetzt, sich anzumelden",
+  "email-exsit-error": "Die E-Mail existiert",
+  "amount-input-max-button-label": "Max",
+  "add-card": "Karte hinzufügen",
+  "complete-profile-toast-message": "Bitte vervollständigen Sie Ihre Profilinformationen, um ordnungsgemäß mit der Plattform arbeiten zu können",
+  "file-too-big-toast-message": "Das Bild ist zu groß (muss kleiner als 4 MB sein)",
+  "not-enough-balance-toast-message-1st": "Ihnen fehlt das Gleichgewicht",
+  "not-enough-balance-toast-message-2nd": "Es muss kleiner sein als",
+  "switch-page-mode": "Seitenmodus wechseln",
+  "yesterday-low": "Gestern Tief",
+  "yesterday-avg": "Durchschnitt von gestern",
+  "yesterday-high": "Gestern Hoch",
+  "source-amount": "Quellbetrag",
+  "target-amount": "Zielbetrag",
+  "status": "Status",
+  "action": "Aktion",
+  "wrong-phone-error": "Ungültige Telefonnummer",
+  "from": "aus",
+  "back": "Zurück",
+  "upload-document-profile-note-1st": "Ihr Foto und Ihr Ausweis müssen Sie direkt und online als Selfie einsenden",
+  "upload-document-profile-note-2nd": "Ihr Foto und Ihr Ausweis müssen sich im selben Karton befinden",
+  "upload-document-profile-note-3rd": "Sie können Ihre Ausweisnummer verdecken",
+  "upload-document-profile-note-4th": "Die Größe des Fotos sollte weniger als 1 MB betragen",
+  "search": "Suchen",
+  "complete-profile-step-3-not-required-message-1st": "Dieser Schritt ist nicht notwendig",
+  "complete-profile-step-3-not-required-message-2nd": "Sie können Ihr Dokument hochladen oder mit dem nächsten Schritt fortfahren",
+  "complete-profile-step-4-not-required-message-1st": "Dieser Schritt ist nicht notwendig",
+  "complete-profile-step-4-not-required-message-2nd": "Sie können Ihre Informationen eingeben oder mit dem nächsten Schritt fortfahren",
+  "your_deposit_of": "Ihre Einzahlung von",
+  "was_made_succesfully": "wurde erfolgreich durchgeführt",
+  "fee": "Gebühr",
+  "watchListTutorial": {
+    "currencyPair": "Währungspaar: Das Paar aus zwei Währungen, die in der Zeile der Liste beschrieben werden",
+    "rate": "Kurs: Der Standardkurs, der diesem Währungspaar zugeordnet wird",
+    "low": "Niedrig: Der niedrigste übereinstimmende Preis mit diesem Währungspaar",
+    "high": "Hoch: Der höchste übereinstimmende Preis mit diesem Währungspaar"
+  },
+  "privacyPolicy":"Datenschutz und Richtlinien",
+  "privacyLanding":"Willkommen bei Xbarat. Wir verpflichten uns, Ihre Privatsphäre zu schützen und die Sicherheit Ihrer persönlichen Daten zu gewährleisten. In dieser Datenschutzrichtlinie wird erläutert, wie wir Ihre Daten erfassen, verwenden und weitergeben.",
+  "indexPrivacyPolicy": [
+    {
+      "title": "Warum sammeln wir Daten?",
+      "drop": [
+        {
+          "head": "Transaktion validieren",
+          "value": "Die Transaktionsüberprüfung ist erforderlich, um zu garantieren, dass unseren Benutzern eine sichere Plattform zum Umtauschen, Überweisen, Abheben oder Einzahlen von Geld zur Verfügung steht. Da wir keinen Geldpool haben und alle Transaktionen durch die Verbindung von Benutzern durchgeführt werden, müssen wir alle Transaktionen zwischen jeweils zwei Benutzern überprüfen."
+        },
+        {
+          "head": "Unterstützung",
+          "value": "Wir bei Xbarat haben das Bedürfnis, unseren Benutzern den besten Service zu bieten. Und da wir Benutzer auf der ganzen Welt haben, hilft uns das Sammeln von Informationen dabei, den schnellsten und besten Kundensupport anzubieten. Dies tun wir, indem wir Menschen mit unseren Vertretern in der Nähe verbinden und sie auch je nach ihren Bedürfnissen verbinden."
+        },
+        {
+          "head": "Identität validieren",
+          "value": "Eine Identitätsüberprüfung ist erforderlich, um die Sicherheit Ihrer Transaktionen zu gewährleisten. Mithilfe von Validierungsunternehmen im Iran und in Europa garantiert Xbrat seinen Benutzern und verbessert den Transaktionsprozess. Bei Xbrat werden die Ausweisdokumente von Ihnen und anderen Benutzern nur verwendet, um die Richtigkeit des Transaktionsprozesses zu überprüfen und sicherzustellen. Mit dieser Aktion wird die Möglichkeit eines Fehlers oder Missbrauchs Ihres Eigentums auf Null reduziert."
+        }
+      ]
+    },
+
+    {
+      "title": "Wie erfassen wir Daten?",
+      "drop": [
+        {
+          "head": "Personenbezogene Daten",
+          "value": "Wir erfassen Ihre persönlichen Daten, wenn Sie sich bei Xbarat anmelden. Dabei können Sie kontrollieren, welche Informationen Sie uns geben, sodass keine Daten ohne Ihre Zustimmung erfasst werden."
+        },
+        {
+          "head": "Transaktionsbelege",
+          "value": "Jede Transaktion zwischen zwei Benutzern wird von unserem Transaktionsüberprüfungsteam durchgeführt. Dieses prüft jedes Detail jeder Transaktion, das von den Benutzern angegeben wird, die sie durchführen."
+        }
+      ]
+    },
+    {
+      "title": "Welche Daten erheben wir?",
+      "drop": [
+        {
+          "head": "Kontaktinformationen",
+          "value": "Wir erfassen Ihre Telefonnummer, E-Mail-Adresse, Ihre Stadt/Ihr Land"
+        },
+        {
+          "head": "Identitätsinformationen",
+          "value": "Wie bereits erwähnt, müssen wir Identitäten überprüfen und dazu einen Identifikationsdatensatz wie ein Passbild oder ein Ausweisbild erfassen"
+        },
+        {
+          "head": "Bankdaten",
+          "value": "Wir sind in einem Geldwechselgeschäft tätig und müssen daher Informationen über die Banken sammeln, an die die Einlagen gehen sollen, oder darüber, von wo aus unsere Benutzer ihr Geld einzahlen werden"
+        }
+      ]
+    }
+  ],
+  "yourBalanceTutorial": {
+    "balance": "Hier können Sie Ihr Guthaben einsehen",
+    "pending": "Sie können den Betrag Ihres ausstehenden Geldes sehen",
+    "locked": "Sie können den Betrag Ihres gesperrten Geldes sehen",
+    "transfer": "Mit dieser Schaltfläche können Sie Ihr Geld überweisen",
+    "withdraw": "Mit dieser Schaltfläche können Sie Ihr Geld abheben"
+  },
+  "exchangeTutorial": {
+    "avgRate": "Dies ist der Durchschnittskurs für dieses Währungspaar",
+    "reverse": "Mit dieser Schaltfläche können Sie Ihren Umtausch umkehren",
+    "sourceCurrency": "Hier können Sie die Quellwährung auswählen",
+    "targetCurrency": "Hier können Sie die Zielwährung auswählen",
+    "sourceAmount": "Hier können Sie den Quellbetrag eingeben",
+    "customRate": "Hier können Sie Ihren individuellen Wechselkurs für den Umtausch eingeben",
+    "targetAmount": "Dieser Teil ist der Zielbetrag",
+    "fee": "Dies ist unsere Umtauschgebühr"
+  },
+  "ContextTutorial": {
+    "Deposit": {
+      "context": [
+        "Wenn Sie Ihr Geld einzahlen möchten, finden Sie hier die Schritt-für-Schritt-Lösung",
+        "1-Gehen Sie zum Abschnitt \"Wallet\".",
+        "2-Geben Sie die Währung Ihrer Einzahlung ein.",
+        "3-Geben Sie den Betrag ein, den Sie einzahlen möchten.",
+        "4-Klicken Sie auf die Schaltfläche \"Senden\"",
+        "5-Warten Sie auf die Zuweisung durch den Administrator"
+      ],
+      "status": {
+        "Akzeptieren": {
+          "desc": "Ihre Anfrage wurde akzeptiert",
+          "full": "Dies bedeutet, dass Ihre Einzahlungsanfrage erfolgreich abgeschlossen wurde und das Geld im Abschnitt \"Ihr Guthaben\" verfügbar ist"
+        },
+        "Ablehnen": {
+          "desc": "Ihre Anfrage wurde abgelehnt",
+          "full": "Ihre Einzahlungsanfrage wurde möglicherweise aufgrund eines Fehlers in Ihrem hochgeladenen Dokument oder eines Fehlers im Überweisungsfluss des Geldes abgelehnt"
+        },
+        "Dokument hochladen": {
+          "desc": "In diesem Fall müssen Sie ein Dokument Ihres Einzahlungsbelegs hochladen",
+          "full": "Sie müssen ein Bild des Belegs hochladen, der das Konto des Endbenutzers und den von Ihnen in den vorherigen Schritten eingegebenen Betrag enthält"
+        }
+      }
+    },
+    "Withdraw": {
+      "context": [
+        "Wenn Sie Ihr Geld abheben möchten. Hier ist die Schritt-für-Schritt-Lösung",
+        "1-Gehen Sie zum Abschnitt \"Wallet\".",
+        "2-Wählen Sie die Schaltfläche \"Abhebung\" auf der Karte in Bezug auf Ihre gewünschte Währung.",
+        "3-Geben Sie den Betrag ein, den Sie abheben möchten.",
+        "4-Wählen Sie Ihr Bankkonto",
+        "5-Klicken Sie auf die Schaltfläche \"Senden\""
+      ],
+      "status": {
+        "Akzeptieren": {
+          "desc": "Ihre Anfrage wurde akzeptiert",
+          "full": "Ihre Auszahlungsanfrage wurde erfolgreich abgeschlossen und sollte auf Ihrem Konto angezeigt werden, das Sie in den vorherigen Schritten ausgewählt haben"
+        },
+        "Ablehnen": {
+          "desc": "Ihre Anfrage wurde abgelehnt",
+          "full": "Ihre Auszahlungsanfrage wurde abgelehnt und dies könnte passieren, weil Sie möglicherweise nicht über den ausreichenden Geldbetrag in dieser Währung verfügten"
+        }
+      }
+    },
+    "Transfer": {
+      "context": [
+        "Wenn Sie Ihr Geld. Hier ist die Schritt-für-Schritt-Lösung",
+        "1-Gehen Sie zum Abschnitt \"Wallet\".",
+        "2-Wählen Sie die Schaltfläche \"Überweisen\" auf der Karte in Bezug auf Ihre gewünschte Währung.",
+        "3-Geben Sie den gewünschten Betrag ein.",
+        "4-Geben Sie den Zielbenutzercode ein",
+        "5-Klicken Sie auf die Schaltfläche \"Senden\""
+      ],
+      "status": {
+        "Akzeptieren": {
+          "desc": "Ihre Anfrage wurde akzeptiert",
+          "full": "Das Geld wurde erfolgreich überwiesen und Sie können dies überprüfen, indem Sie den von Ihnen in den vorherigen Schritten angegebenen Endbenutzer kontaktieren"
+        },
+        "Ablehnen": {
+          "desc": "Ihre Anfrage wurde abgelehnt",
+          "full": "Ihre Überweisungsanfrage wurde abgelehnt, weil Sie möglicherweise nicht über den ausreichenden Geldbetrag zum Überweisen verfügten oder weil der von Ihnen angegebene Endbenutzer möglicherweise nicht gültig war"
+        }
+      }
+    },
+    "Exchange": {
+      "context": [
+        "Wenn Sie Ihr Geld umtauschen möchten, finden Sie hier die Schritt-für-Schritt-Lösung",
+        "1-Gehen Sie zum Abschnitt \"Home\".",
+        "2-Geben Sie die Währungen Ihres Umtauschs ein.",
+        "3-Geben Sie den Betrag ein, den Sie umtauschen möchten.",
+        "4-Geben Sie den Kurs ein, zu dem Sie umtauschen möchten.",
+        "5-Klicken Sie auf die Schaltfläche \"Senden\""
+      ],
+      "status": {
+        "Akzeptieren": {
+          "desc": "Ihre Anfrage wurde akzeptiert",
+          "full": "Dies bedeutet, dass Ihre Umtauschanfrage erfolgreich abgeschlossen wurde und das Geld im Abschnitt \"Ihr Guthaben\" auf Ihrer Zielwährungskarte verfügbar ist"
+        },
+        "Ablehnen": {
+          "desc": "Ihre Anfrage wurde abgelehnt",
+          "full": "Ihre Umtauschanfrage wurde möglicherweise aufgrund eines Fehlers im Überweisungsfluss des Geldes abgelehnt"
+        }
+      }
+    }
+  }
+}
+
