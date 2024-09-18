@@ -43,7 +43,7 @@ export default function LanguageSwitcher() {
         },
         setLang,
         () => {
-          window.localStorage.setItem("selectedLocaleIndex", "");
+          window.localStorage.setItem("selectedLocaleIndex", "-1");
           location.reload();
         }
       );
@@ -51,12 +51,11 @@ export default function LanguageSwitcher() {
   }, [selectedLocaleIndex]);
 
   const findSavedLocale = () => {
-    const savedSelectedLocaleIndex: number | string | null =
-      window.localStorage.getItem("selectedLocaleIndex") as unknown as
-        | number
-        | string;
+    const savedSelectedLocaleIndex: number | null = window.localStorage.getItem(
+      "selectedLocaleIndex"
+    ) as unknown as number;
 
-    if (typeof savedSelectedLocaleIndex === "number") {
+    if (savedSelectedLocaleIndex !== -1) {
       savedSelectedLocaleIndex !== null &&
       savedSelectedLocaleIndex !== undefined
         ? setSelectedLocale(locales[savedSelectedLocaleIndex])
