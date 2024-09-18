@@ -5,6 +5,7 @@ import { ThemeState } from "@/lib/store";
 import Button from "./Button";
 import { MutableRefObject, useEffect, useState } from "react";
 import Logo from "@/public/images/logo.png";
+import LogoFa from "@/public/images/logo-fa.png";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { usePathname } from "next/navigation";
 
@@ -52,29 +53,39 @@ export default function Navbar(
         } `}
       >
         <Link className="flex items-center gap-x-2" href="/">
-          <Image
-            src={Logo}
-            className="sm:w-12 sm:h-12 w-[2.6rem] h-[2.6rem]"
-            alt="Logo"
-          />
-          <div
-            className={`flex flex-col ${
-              font === "Fa" ? "gap-y-0.5" : "-mb-1"
-            } `}
-          >
-            <span
-              className={`w-fit text-yellow-gradient font-${font}-bold text-2xl sm:text-3xl`}
-            >
-              {lang["logo-header"]}
-            </span>
-            <span
-              className={`text-${oppositeTheme} font-${font}-thin ${
-                font === "Fa" ? "-mt-1" : "-mt-2"
-              } sm:text-xl`}
-            >
-              {lang["slogan"]}
-            </span>
-          </div>
+          {font === "Fa" ? (
+            <Image
+              src={LogoFa}
+              className="w-fit sm:h-16 h-[3rem]"
+              alt="Logo"
+            />
+          ) : (
+            <>
+              <Image
+                src={Logo}
+                className="sm:w-12 sm:h-12 w-[2.6rem] h-[2.6rem]"
+                alt="Logo"
+              />
+              <div
+                className={`flex flex-col ${
+                  font === "Fa" ? "gap-y-0.5" : "-mb-1"
+                } `}
+              >
+                <span
+                  className={`w-fit text-yellow-gradient font-${font}-bold text-2xl sm:text-3xl`}
+                >
+                  {lang["logo-header"]}
+                </span>
+                <span
+                  className={`text-${oppositeTheme} font-${font}-thin ${
+                    font === "Fa" ? "-mt-1" : "-mt-2"
+                  } sm:text-xl`}
+                >
+                  {lang["slogan"]}
+                </span>
+              </div>
+            </>
+          )}
         </Link>
 
         <button

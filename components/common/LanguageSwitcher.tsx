@@ -84,14 +84,12 @@ export default function LanguageSwitcher() {
 
   return (
     <div className="flex items-center">
-      {selectedLocale && (
-        <img
-          id="lang-tooltip"
-          alt={selectedLocale.title}
-          src={selectedLocale.icon}
-          className="w-7 h-7 cursor-pointer"
-        />
-      )}
+      <img
+        id="lang-tooltip"
+        alt={selectedLocale ? selectedLocale.title : ""}
+        src={selectedLocale ? selectedLocale.icon : ""}
+        className="w-7 h-7 cursor-pointer"
+      />
       <Tooltip
         anchorSelect={`#lang-tooltip`}
         place="top"
