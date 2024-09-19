@@ -105,14 +105,16 @@ function Marker(
                   </div>
                 ))}
             </div>
-            <span className="text-dark text-center mt-2">Using</span>
+            <span className="text-dark text-center mt-2">{lang["using"]}</span>
             <div className="flex flex-col gap-y-1">
               {wallet_tank_types.map((wallet_tank_type, index) => (
                 <span
                   key={index}
                   className="w-full px-3 pt-1.5 rounded-full text-center bg-blue text-light"
                 >
-                  {wallet_tank_type.title}
+                  {lang[wallet_tank_type.slug]
+                    ? lang[wallet_tank_type.slug]
+                    : wallet_tank_type.title}
                 </span>
               ))}
             </div>

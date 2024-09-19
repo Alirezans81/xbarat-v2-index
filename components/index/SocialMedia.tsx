@@ -74,7 +74,7 @@ export default function SocialMedia(props: PageProps) {
             {lang["index-social-media"]}
           </span>
           <span
-            className={`text-${oppositeTheme} text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center`}
+            className={`text-${oppositeTheme} text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center lg:text-start`}
           >
             {lang["index-social-media-title"]}
           </span>
@@ -90,21 +90,23 @@ export default function SocialMedia(props: PageProps) {
                 textAlign: "start",
               }}
             >
-              <div className="flex flex-row gap-x-2 items-center">
+              <div className="flex flex-row justify-center lg:justify-start w-full gap-x-2 items-center">
                 <Image
                   alt={feature.title}
                   src={feature.icon}
                   className="w-5 h-5"
                 />
                 <span
-                  className={`text-${oppositeTheme} text-lg ${
+                  className={`text-${oppositeTheme} text-lg leading-5 text-center w-max ${
                     font === "Fa" ? "" : "-mb-1"
                   }`}
                 >
                   {feature.title}
                 </span>
               </div>
-              <span className="text-gray text-center">{feature.desc}</span>
+              <span className="text-gray text-center lg:text-start">
+                {feature.desc}
+              </span>
             </div>
           ))}
         </div>
