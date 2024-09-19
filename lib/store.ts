@@ -143,7 +143,14 @@ export type Currency = {
   get_sym_pic_gray_url: string;
 };
 export type WalletTankType = {
+  url: string;
+  currencies: Currency;
+  slug: string;
   title: string;
+  show_order: number;
+  logo: string;
+  is_active: boolean;
+  is_deleted: boolean;
 };
 export type SupportLocation = {
   country: string;
