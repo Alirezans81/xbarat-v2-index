@@ -79,7 +79,7 @@ export default function Page() {
         />
 
         <div
-          dir={font === "Fa" ? "rtl" : "ltr"}
+          dir={font === "Fa" || font === "Ar" ? "rtl" : "ltr"}
           id="page-wrap"
           ref={navbarDivRef as LegacyRef<HTMLDivElement>}
           className={`w-[100dvw] h-[100dvh] bg-${theme} ${

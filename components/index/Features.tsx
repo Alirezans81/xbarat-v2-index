@@ -57,7 +57,7 @@ export default function Features(props: PageProps) {
     >
       <div
         className={`w-full flex flex-col items-center ${
-          font === "Fa" ? "gap-y-4" : "gap-y-2"
+          font === "Fa" || font === "Ar" ? "gap-y-4" : "gap-y-2"
         } text-center`}
       >
         <span
@@ -71,7 +71,10 @@ export default function Features(props: PageProps) {
 
       <div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-        style={{ direction: font === "Fa" ? "rtl" : "ltr", textAlign: "start" }}
+        style={{
+          direction: font === "Fa" || font === "Ar" ? "rtl" : "ltr",
+          textAlign: "start",
+        }}
       >
         {features.map((feature, index) => (
           <div
@@ -79,7 +82,7 @@ export default function Features(props: PageProps) {
             className={`grid-cols-1 flex flex-col gap-y-5 items-center p-[10%] border border-transparent ${
               (index + 1) % getGridCols() === 0
                 ? ""
-                : font === "Fa"
+                : font === "Fa" || font === "Ar"
                 ? "border-l-blue"
                 : "border-r-blue"
             } ${
