@@ -24,9 +24,11 @@ export default function LandingPrivacy(props: PageProps) {
         <Image
           alt="Arrow"
           src={
-            font === "Fa" && theme === ("dark" as ThemeState["theme"])
+            font === "Fa" ||
+            (font === "Ar" && theme === ("dark" as ThemeState["theme"]))
               ? ArrowRight
-              : font === "Fa" && theme === ("light" as ThemeState["theme"])
+              : font === "Fa" ||
+                (font === "Ar" && theme === ("light" as ThemeState["theme"]))
               ? ArrowRightDark
               : font !== "Fa" && theme === ("light" as ThemeState["theme"])
               ? ArrowLeftDark
@@ -43,7 +45,7 @@ export default function LandingPrivacy(props: PageProps) {
         <TypeAnimation
           sequence={[
             (lang["slogan"] ||
-              (font === "Fa"
+              (font === "Fa" || font === "Ar"
                 ? "وقتی خودت کافی هستی"
                 : font === "En"
                 ? "When you are enough"
@@ -51,7 +53,7 @@ export default function LandingPrivacy(props: PageProps) {
             showTypingAnimtionDuration,
             () => {},
             (lang["slogan"] ||
-              (font === "Fa"
+              (font === "Fa" || font === "Ar"
                 ? "وقتی خودت کافی هستی"
                 : font === "En"
                 ? "When you are enough"
@@ -59,7 +61,7 @@ export default function LandingPrivacy(props: PageProps) {
             showTypingAnimtionDuration,
             () => {},
             (lang["slogan"] ||
-              (font === "Fa"
+              (font === "Fa" || font === "Ar"
                 ? "وقتی خودت کافی هستی"
                 : font === "En"
                 ? "When you are enough"
@@ -76,7 +78,7 @@ export default function LandingPrivacy(props: PageProps) {
           repeat={Infinity}
           style={{
             textAlign: "start",
-            direction: font === "Fa" ? "rtl" : "ltr",
+            direction: font === "Fa" || font === "Ar" ? "rtl" : "ltr",
           }}
           className={`z-[1] sm:max-w-[30rem] rtl:sm:max-w-[32rem] text-5xl sm:text-7xl h-[11rem] leading-[3.5rem] sm:leading-[5rem] flex flex-col text-${oppositeTheme} font-${font}-regular`}
         />
@@ -86,7 +88,7 @@ export default function LandingPrivacy(props: PageProps) {
             className={`text-gray font-${font}-regular text-lg`}
             style={{
               textAlign: "start",
-              direction: font === "Fa" ? "rtl" : "ltr",
+              direction: font === "Fa" || font === "Ar" ? "rtl" : "ltr",
             }}
           >
             {lang["index-xbarat-desc"]}
@@ -120,7 +122,5 @@ export default function LandingPrivacy(props: PageProps) {
         />
       </div>
     </section>
-
-
   );
 }

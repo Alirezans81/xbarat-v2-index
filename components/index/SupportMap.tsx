@@ -149,7 +149,10 @@ export default function SupportMap(props: PageProps) {
     <section
       id="support-map"
       className={`w-full flex flex-col items-center gap-y-20 font-${font}-regular`}
-      style={{ direction: font === "Fa" ? "rtl" : "ltr", textAlign: "start" }}
+      style={{
+        direction: font === "Fa" || font === "Ar" ? "rtl" : "ltr",
+        textAlign: "start",
+      }}
     >
       <div className="flex flex-col items-center gap-y-4 text-center">
         <div className="text-blue text-lg">{lang["index-support-map"]}</div>

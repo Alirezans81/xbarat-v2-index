@@ -45,7 +45,10 @@ export default function HowItWorks(props: PageProps) {
 
       <div
         className={`w-full flex flex-col items-center lg:items-start text-center lg:text-left gap-y-5 font-${font}-regular lg:mr-12 mt-10 lg:mt-0`}
-        style={{ direction: font === "Fa" ? "rtl" : "ltr", textAlign: "start" }}
+        style={{
+          direction: font === "Fa" || font === "Ar" ? "rtl" : "ltr",
+          textAlign: "start",
+        }}
       >
         <div className="w-full flex flex-col items-center lg:items-start gap-y-2">
           <span className={`text-yellow text-2xl`}>

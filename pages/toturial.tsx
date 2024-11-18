@@ -70,7 +70,7 @@ export default function Toturial() {
           lang={lang}
         />
         <div
-          dir={font === "Fa" ? "rtl" : "ltr"}
+          dir={font === "Fa" || font === "Ar" ? "rtl" : "ltr"}
           id="page-wrap"
           ref={navbarDivRef as LegacyRef<HTMLDivElement>}
           className={`w-[100dvw] h-[100dvh] bg-${theme} ${
@@ -106,7 +106,9 @@ export default function Toturial() {
                   >
                     <span
                       className={`absolute ${
-                        font === "Fa" ? "right-3.5" : "left-3.5"
+                        font === "Fa" || font === "Ar"
+                          ? "right-3.5"
+                          : "left-3.5"
                       } top-3.5 z-10 md:text-base text-sm bg-blue text-light px-5 pt-2.5 pb-1.5 rounded-2xl font-${font}-regular`}
                     >
                       For Mobile
@@ -124,7 +126,9 @@ export default function Toturial() {
                   >
                     <span
                       className={`absolute ${
-                        font === "Fa" ? "right-3.5" : "left-3.5"
+                        font === "Fa" || font === "Ar"
+                          ? "right-3.5"
+                          : "left-3.5"
                       } top-3.5 z-10 md:text-base text-sm bg-blue text-light px-5 pt-2.5 pb-1.5 rounded-2xl font-${font}-regular`}
                     >
                       For Desktop
