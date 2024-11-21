@@ -34,7 +34,11 @@ export default function Button(
       <div
         className={`transition-all duration-300 rounded-lg absolute w-full h-full bg-blue-gradient-opposite ${bgGradientOppositeClass}`}
       />
-      <span className={`text-light z-10 ${font === "Fa" ? "" : "-mb-1.5"}`}>
+      <span
+        className={`text-light z-10 ${
+          font === "Fa" || font === "Ar" ? "" : "-mb-1.5"
+        }`}
+      >
         {children || lang["index-go-to-platform-button"]}
       </span>
     </Link>

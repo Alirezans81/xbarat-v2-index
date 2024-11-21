@@ -70,7 +70,11 @@ export default function CurrencyPairRates(props: PageProps) {
                     />
                   </div>
                 </div>
-                <span className={`text-xl ${font === "Fa" ? "" : "-mb-1.5"}`}>
+                <span
+                  className={`text-xl ${
+                    font === "Fa" || font === "Ar" ? "" : "-mb-1.5"
+                  }`}
+                >
                   {addComma(currencyPairRate.rate)}
                 </span>
               </div>
@@ -114,7 +118,11 @@ export default function CurrencyPairRates(props: PageProps) {
                     />
                   </div>
                 </div>
-                <span className={`text-xl ${font === "Fa" ? "" : "-mb-1.5"}`}>
+                <span
+                  className={`text-xl ${
+                    font === "Fa" || font === "Ar" ? "" : "-mb-1.5"
+                  }`}
+                >
                   {addComma(currencyPairRate.rate)}
                 </span>
               </div>

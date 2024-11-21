@@ -35,7 +35,10 @@ export default function Journey(props: PageProps) {
     <section
       id="journey"
       className={`w-full flex flex-col items-center gap-y-10 font-${font}-regular`}
-      style={{ direction: font === "Fa" ? "rtl" : "ltr", textAlign: "start" }}
+      style={{
+        direction: font === "Fa" || font === "Ar" ? "rtl" : "ltr",
+        textAlign: "start",
+      }}
     >
       <div className="w-full flex flex-col items-center gap-y-4 text-center">
         <span
@@ -58,7 +61,7 @@ export default function Journey(props: PageProps) {
             <span
               className={`text-${oppositeTheme} w-full text-xl font-${font}-bold`}
               style={{
-                direction: font === "Fa" ? "rtl" : "ltr",
+                direction: font === "Fa" || font === "Ar" ? "rtl" : "ltr",
                 textAlign: "start",
               }}
             >

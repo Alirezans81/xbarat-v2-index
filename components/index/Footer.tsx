@@ -16,7 +16,10 @@ export default function Footer(props: PageProps) {
   return (
     <footer
       className={`w-full bg-${theme}-back font-${font}-regular`}
-      style={{ direction: font === "Fa" ? "rtl" : "ltr", textAlign: "start" }}
+      style={{
+        direction: font === "Fa" || font === "Ar" ? "rtl" : "ltr",
+        textAlign: "start",
+      }}
     >
       <div className="grid grid-cols-12 xl:grid-cols-11 gap-5 max-w-[1280px] px-[7%] xl:px-0 py-6 mx-auto">
         <Link
@@ -41,7 +44,7 @@ export default function Footer(props: PageProps) {
           <span
             className={`text-${oppositeTheme} text-xl md:text-2xl leading-8 font-${font}-bold`}
             style={{
-              direction: font === "Fa" ? "rtl" : "ltr",
+              direction: font === "Fa" || font === "Ar" ? "rtl" : "ltr",
               textAlign: "start",
             }}
           >
@@ -65,7 +68,7 @@ export default function Footer(props: PageProps) {
           <span
             className={`text-blue font-${font}-bold text-lg`}
             style={{
-              direction: font === "Fa" ? "rtl" : "ltr",
+              direction: font === "Fa" || font === "Ar" ? "rtl" : "ltr",
               textAlign: "start",
             }}
           >
@@ -111,7 +114,7 @@ export default function Footer(props: PageProps) {
           <span
             className={`text-blue font-${font}-bold text-lg`}
             style={{
-              direction: font === "Fa" ? "rtl" : "ltr",
+              direction: font === "Fa" || font === "Ar" ? "rtl" : "ltr",
               textAlign: "start",
             }}
           >
@@ -119,7 +122,7 @@ export default function Footer(props: PageProps) {
           </span>
           <div className="flex flex-col gap-y-1.5">
             <Link
-              href={"/#how-it-works"}
+              href={"/privacy-&-policy"}
               className={`transition-all duration-300 text-hover-${oppositeTheme}`}
             >
               {lang["index-privacy-&-policy"]}
@@ -134,7 +137,7 @@ export default function Footer(props: PageProps) {
             <span
               className={`text-blue font-${font}-bold text-lg`}
               style={{
-                direction: font === "Fa" ? "rtl" : "ltr",
+                direction: font === "Fa" || font === "Ar" ? "rtl" : "ltr",
                 textAlign: "start",
               }}
             >

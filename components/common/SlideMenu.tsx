@@ -47,7 +47,7 @@ export default function SlideMenu(
       padding: "20px",
       background: "#283236",
       borderRadius: "100%",
-      right: font === "Fa" ? "75%" : "6%",
+      right: font === "Fa" || font === "Ar" ? "75%" : "6%",
       top: "15px",
     },
     bmCross: {
@@ -88,14 +88,7 @@ export default function SlideMenu(
       styles={SliderMenuStyles}
     >
       <div className="w-full h-full flex flex-col justify-between relative">
-        <div
-          dir={font === "Fa" ? "rtl" : "ltr"}
-          className="absolute start-0 -top-10 z-[500]"
-        >
-          <LanguageSwitcher />
-        </div>
-
-        <div dir={font === "Fa" ? "rtl" : "ltr"} className="">
+        <div dir={font === "Fa" || font === "Ar" ? "rtl" : "ltr"} className="">
           <span className="text-snowWhite font-medium text-lg">
             {lang["index-menu"]}
           </span>
@@ -117,7 +110,7 @@ export default function SlideMenu(
         </div>
 
         <div
-          dir={font === "Fa" ? "rtl" : "ltr"}
+          dir={font === "Fa" || font === "Ar" ? "rtl" : "ltr"}
           className="absolute bottom-2.5"
         >
           <span className="text-snowWhite font-medium text-lg">
