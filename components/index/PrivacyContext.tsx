@@ -21,7 +21,7 @@ export default function PrivacyContext(props: PageProps) {
 
         {/* Content Grid */}
         <div
-          dir={font !== "Fa" ? "ltr" : "rtl"}
+          dir={(font !== "Fa" && font !== "Ar")? "ltr" : "rtl"}
           className={`bg-${theme} p-5 rounded-2xl w-full flex flex-col md:flex-row bg-transparent gap-y-5 z-[1] gap-x-5 h-fit`}
         >
           {/* Title Panel */}
@@ -51,6 +51,8 @@ export default function PrivacyContext(props: PageProps) {
                   {/* SubContent Container */}
                   {expandContext.title === titleIndex && (
                     <div
+                      dir={(font !== "Fa" && font !== "Ar")? "ltr" : "rtl"}
+       
                       className={`bg-${theme} flex flex-col w-full overflow-hidden text-${oppositeTheme} transition-all duration-300 rounded-2xl p-4 gap-y-3`}
                     >
                       {section.drop.map((sub: any, subIndex: number) => (
