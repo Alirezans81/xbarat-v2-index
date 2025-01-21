@@ -7,9 +7,9 @@ import { useState } from "react";
 export default function Button(
   props: PageProps & {
     children: Readonly<React.ReactNode> | undefined | null;
-  }
+  } & {className?: string}
 ) {
-  const { font, lang, children } = props;
+  const { font, lang, children, className } = props;
 
   const [bgGradientClass, setBgGradient] = useState("opacity-100");
   const [bgGradientOppositeClass, setBgGradientOpposite] =
@@ -18,7 +18,7 @@ export default function Button(
   return (
     <Link
       href={process.env.NEXT_PUBLIC_CTA_BUTTON + ""}
-      className={`flex justify-center items-center rounded-lg px-5 py-[12.5px] font-${font}-regular relative px-7 w-fit`}
+      className={`flex justify-center items-center rounded-lg px-5 py-[12.5px] font-${font}-regular relative px-7 w-fit ${className}`}
       onMouseOver={() => {
         setBgGradient("opacity-0");
         setBgGradientOpposite("opacity-100");
