@@ -50,9 +50,20 @@ export default function PrivacyPolicy() {
         title: lang["index-privacy-&-policy"],
         route: "/privacy-&-policy",
       },
+      // {
+      //   id: "",
+      //   title: "Toturial",
+      //   route: "/toturial",
+      // },
+      {
+        id: "",
+        title: "Bug Bounty",
+        route: "/bug-bounty",
+      },
     ]);
     setActiveRoute("/");
   }, [lang]);
+
   if (lang && font && theme && routes && activeRoute) {
     return (
       <div className={`absolute w-100vw h-100vh bg-${theme} flex flex-col`}>
