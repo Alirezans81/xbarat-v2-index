@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "smicln.ir",
+        hostname: "api.xbarat-back.pro",
         port: "",
         pathname: "/media/**",
       },
@@ -16,7 +16,7 @@ const nextConfig = {
       },
     ],
   },
-  output: 'standalone'
+  output: "standalone",
 };
 
 export default nextConfig;

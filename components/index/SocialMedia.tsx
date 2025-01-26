@@ -67,7 +67,10 @@ export default function SocialMedia(props: PageProps) {
 
       <div
         className={`w-full flex flex-col gap-y-5 font-${font}-regular ml-0 lg:ml-20`}
-        style={{ direction: font === "Fa" ? "rtl" : "ltr", textAlign: "start" }}
+        style={{
+          direction: font === "Fa" || font === "Ar" ? "rtl" : "ltr",
+          textAlign: "start",
+        }}
       >
         <div className="flex flex-col items-center lg:items-start gap-y-2">
           <span className={`text-yellow text-xl lg:text-2xl`}>
@@ -86,7 +89,7 @@ export default function SocialMedia(props: PageProps) {
               key={index}
               className="flex flex-col items-center md:items-start gap-y-3"
               style={{
-                direction: font === "Fa" ? "rtl" : "ltr",
+                direction: font === "Fa" || font === "Ar" ? "rtl" : "ltr",
                 textAlign: "start",
               }}
             >
@@ -98,7 +101,7 @@ export default function SocialMedia(props: PageProps) {
                 />
                 <span
                   className={`text-${oppositeTheme} text-lg leading-5 text-center w-max ${
-                    font === "Fa" ? "" : "-mb-1"
+                    font === "Fa" || font === "Ar" ? "" : "-mb-1"
                   }`}
                 >
                   {feature.title}

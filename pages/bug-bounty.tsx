@@ -1,25 +1,13 @@
-"use client";
-
-import Navbar from "@/components/common/Navbar";
-import Hero from "@/components/index/Hero";
+import "../app/globals.css";
 import {
   ThemeState,
   useFontStore,
-  useLocaleFileStore,
-  useThemeStore,
-  useRouteStore,
   useLoadingStore,
+  useLocaleFileStore,
+  useRouteStore,
+  useThemeStore,
 } from "@/lib/store";
 import Image from "next/image";
-
-import Logo from "@/public/images/logo.png";
-import Agencies from "@/components/index/CurrencyPairRates";
-import HowItWorks from "@/components/index/HowItWorks";
-import Features from "@/components/index/Features";
-import SocialMedia from "@/components/index/SocialMedia";
-import Journey from "@/components/index/Journey";
-import SupportMap from "@/components/index/SupportMap";
-import Footer from "@/components/index/Footer";
 import {
   LegacyRef,
   MutableRefObject,
@@ -27,9 +15,13 @@ import {
   useRef,
   useState,
 } from "react";
+import Logo from "@/public/images/logo.png";
+import Footer from "@/components/index/Footer";
+import Navbar from "@/components/common/Navbar";
 import SlideMenu from "@/components/common/SlideMenu";
+import Button from "@/components/common/Button";
 
-export default function Page() {
+export default function BugBounty() {
   const lang = useLocaleFileStore((state) => state.localeFile);
   const theme = useThemeStore((state) => state.theme);
   const font = useFontStore((state) => state.font);
@@ -101,21 +93,19 @@ export default function Page() {
             navbarDivRef={navbarDivRef}
           />
 
-          <header className="w-full flex justify-center">
-            <div className="max-w-[1280px] px-[7%] xl:px-0">
-              <Hero lang={lang} font={font} theme={theme} />
-            </div>
-          </header>
-
-          <Agencies lang={lang} font={font} theme={theme} />
-
           <div className={`w-full flex justify-center overflow-hidden`}>
             <div className="max-w-[1280px] px-[7%] xl:px-0 flex flex-col gap-y-20 py-16">
-              <HowItWorks lang={lang} font={font} theme={theme} />
-              <Features lang={lang} font={font} theme={theme} />
-              <SocialMedia lang={lang} font={font} theme={theme} />
-              <Journey lang={lang} font={font} theme={theme} />
-              <SupportMap lang={lang} font={font} theme={theme} />
+              <div className="w-80 flex flex-col gap-[2dvw]">
+                <input
+                  placeholder="page"
+                  className="w-full bg-dark-back rounded-xl overflow-hidden px-4 py-3"
+                />
+                <textarea className="w-full bg-dark-back rounded-xl overflow-hidden px-4 py-3" />
+
+                <Button lang={lang} font={font} theme="dark" className="w-full">
+                  {"Submit"}
+                </Button>
+              </div>
             </div>
           </div>
 
