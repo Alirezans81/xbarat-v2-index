@@ -15,7 +15,7 @@ import {
   useRef,
   useState,
 } from "react";
-import Dropdown from "@/components/index/Dropdown";
+// import Dropdown from "@/components/index/Dropdown";
 import Logo from "@/public/images/logo.png";
 import Footer from "@/components/index/Footer";
 import Navbar from "@/components/common/Navbar";
@@ -118,14 +118,14 @@ export default function BugBounty() {
                       <span>Select The Place That You Saw the Bug</span>
                       <div className={openDropdown ? "" : ""}></div>
                     </div>
-                    <Dropdown
+                    {/* <Dropdown
                       lang={lang}
                       font={font}
                       theme={theme}
                       openDropdown={openDropdown}
                       dropdownState={dropdownState}
                       setChoice={setSelectedLocation}
-                    />
+                    /> */}
                   </button>
                 </div>
                 <div className="w-1/2 flex flex-col gap-y-4">
