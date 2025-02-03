@@ -55,11 +55,11 @@ export default function PrivacyPolicy() {
       //   title: "Toturial",
       //   route: "/toturial",
       // },
-      {
-        id: "",
-        title: "Bug Bounty",
-        route: "/bug-bounty",
-      },
+      // {
+      //   id: "",
+      //   title: "Bug Bounty",
+      //   route: "/bug-bounty",
+      // },
     ]);
     setActiveRoute("/");
   }, [lang]);

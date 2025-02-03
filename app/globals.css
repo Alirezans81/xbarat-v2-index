@@ -570,19 +570,24 @@ body {
   animation-delay: 0.7s !important;
 }
 
-@keyframes swipe {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100%);
+@keyframes scroll {
+  to {
+    -webkit-transform: translate(-50%);
   }
 }
-.animate-swipe {
-  display: flex;
-  animation: swipe 25s linear infinite;
+@-webkit-keyframes scroll {
+  to {
+    -webkit-transform: translate(-50%);
+  }
 }
-.animate-swipe-group:hover .animate-swipe {
+.animate-scroll {
+  -webkit-animation-name: scroll;
+  -webkit-animation-duration: 40s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-fill-mode: infinite;
+}
+.animate-scroll:hover {
   animation-play-state: paused;
 }
 

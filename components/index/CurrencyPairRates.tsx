@@ -30,10 +30,10 @@ export default function CurrencyPairRates(props: PageProps) {
 
   return (
     <section
-      className={`z-[2] w-full py-4 flex flex-col gap-y-5 items-center bg-${theme}-back font-${font}-regular relative animate-swipe-group`}
+      className={`z-[2] w-full py-4 flex flex-col gap-y-5 items-center bg-${theme}-back font-${font}-regular`}
     >
-      <div className="w-full flex flex-row-reverse items-center">
-        <div className="flex animate-swipe">
+      <div className="max-w-full overflow-hidden">
+        <div className="flex flex-nowrap animate-scroll w-max">
           {currencyPairRates.map((currencyPairRate, index) => (
             <div
               key={index}
@@ -80,8 +80,6 @@ export default function CurrencyPairRates(props: PageProps) {
               </div>
             </div>
           ))}
-        </div>
-        <div className="flex animate-swipe">
           {currencyPairRates.map((currencyPairRate, index) => (
             <div
               key={index}
