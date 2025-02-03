@@ -141,7 +141,7 @@ export default function BugBounty() {
                   </div>
                   <div className="gap-y-1 flex flex-col">
                     <span className={`text-${oppositeTheme} font-bold pl-1`}>
-                      What was the System's Expected Behaviour?
+                      What was the Systems Expected Behaviour?
                     </span>
 
                     <input
