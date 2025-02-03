@@ -6,6 +6,8 @@ import Loading from "@/components/common/Loading";
 import Image from "next/image";
 import Script from "next/script";
 
+import Support from "./support.png";
+
 export const metadata: Metadata = {
   title: "Xbarat | Exchange/Transfer your money",
   description: "Exchange/Transfer platform",
@@ -36,7 +38,7 @@ export default function RootLayout({
         >
           <Image
             alt="Goftino Button"
-            src={require("./support.png")}
+            src={Support}
             width={35}
             height={35}
           />

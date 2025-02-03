@@ -55,6 +55,11 @@ export default function Toturial() {
         title: "Toturial",
         route: "/toturial",
       },
+      {
+        id: "",
+        title: "Bug Bounty",
+        route: "/bug-bounty",
+      },
     ]);
     setActiveRoute("/");
   }, [lang]);
