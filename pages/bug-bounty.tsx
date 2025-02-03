@@ -15,6 +15,7 @@ import {
   useRef,
   useState,
 } from "react";
+import Dropdown from "@/components/index/Dropdown";
 import Logo from "@/public/images/logo.png";
 import Footer from "@/components/index/Footer";
 import Navbar from "@/components/common/Navbar";
@@ -37,7 +38,9 @@ export default function BugBounty() {
     theme === ("dark" as ThemeState["theme"]) ? "light" : "dark";
 
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-
+  const [openDropdown, setOpenDropdown] = useState(false);
+  const [selectedLocation, setSelectedLocation] = useState("")
+  const [dropdownState, setDropdownState] = useState(["a", "j", "d", "f"]);
   useEffect(() => {
     setRoutes([
       {
@@ -79,9 +82,8 @@ export default function BugBounty() {
           dir={font === "Fa" || font === "Ar" ? "rtl" : "ltr"}
           id="page-wrap"
           ref={navbarDivRef as LegacyRef<HTMLDivElement>}
-          className={`w-[100dvw] h-[100dvh] bg-${theme} ${
-            isLoading ? "overflow-hidden" : "overflow-y-auto overflow-x-hidden"
-          }`}
+          className={`w-[100dvw] h-[100dvh] bg-${theme} ${isLoading ? "overflow-hidden" : "overflow-y-auto overflow-x-hidden"
+            }`}
         >
           <Navbar
             lang={lang}
@@ -93,25 +95,73 @@ export default function BugBounty() {
             navbarDivRef={navbarDivRef}
           />
 
-          <div className={`w-full flex justify-center overflow-hidden`}>
-            <div className="max-w-[1280px] px-[7%] xl:px-0 flex flex-col gap-y-20 py-16">
-              <div className="w-80 flex flex-col gap-[2dvw]">
-                <input
-                  placeholder="page"
-                  className="w-full bg-dark-back rounded-xl overflow-hidden px-4 py-3"
-                />
-                <textarea className="w-full bg-dark-back rounded-xl overflow-hidden px-4 py-3" />
+          <div className={`w-full flex flex-col justify-center items-center overflow-hidden gap-y-10 pb-10`}>
+            <div className={`w-full max-w-4xl text-xl h-fit flex justify-center text-${oppositeTheme}`}>Here at Xbarat we aim for Perfection and so we ask you on how should we improve the stability and maitainability of our website.
+              Here at Xbarat we aim for Perfection and so we ask you on how should we improve the stability and maitainability of our website.
+            </div>
+            <div className="max-w-4xl w-full flex flex-col bg-dark-back border-2 border-solid border-blue  rounded-2xl rounded-tl-sm gap-y-2 ">
+              <div className={`w-fit h-fit bg-blue font-bold text-xl rounded-br-full pr-10 pl-6 py-1   text-${oppositeTheme}`}>Bug Report Form</div>
+              <div className="w-full flex flex-row p-5 gap-x-5">
+                <div className="w-1/2 flex flex-col gap-y-4">
+                  <div className="gap-y-1 flex flex-col">
+                    <span className={`text-${oppositeTheme} font-bold pl-1`}>
+                      How did you find the Bug?
+                    </span>
 
-                <Button lang={lang} font={font} theme="dark" className="w-full">
-                  {"Submit"}
-                </Button>
+                    <input
+                      placeholder="Occurance of the Bug..."
+                      className="w-full bg-dark rounded-xl overflow-hidden px-4 py-3"
+                    />
+                  </div>
+                  <button className={`w-full h-fit flex flex-col bg-dark rounded-2xl text-gray`} onClick={() => setOpenDropdown(!openDropdown)}>
+                    <div className=" w-full h-fit p-4 flex flex-row">
+                      <span>Select The Place That You Saw the Bug</span>
+                      <div className={openDropdown ? "" : ""}></div>
+                    </div>
+                    <Dropdown
+                      lang={lang}
+                      font={font}
+                      theme={theme}
+                      openDropdown={openDropdown}
+                      dropdownState={dropdownState}
+                      setChoice={setSelectedLocation}
+                    />
+                  </button>
+                </div>
+                <div className="w-1/2 flex flex-col gap-y-4">
+                  <div className="gap-y-1 flex flex-col">
+                    <span className={`text-${oppositeTheme} font-bold pl-1`}>
+                      What is The Bug?
+                    </span>
+
+                    <input
+                      placeholder="Desribe The Bug..."
+                      className="w-full bg-dark rounded-xl overflow-hidden px-4 py-3"
+                    />
+                  </div>
+                  <div className="gap-y-1 flex flex-col">
+                    <span className={`text-${oppositeTheme} font-bold pl-1`}>
+                      What was the System's Expected Behaviour?
+                    </span>
+
+                    <input
+                      placeholder="Desribe The Expected Functionality..."
+                      className="w-full bg-dark rounded-xl overflow-hidden px-4 py-3"
+                    />
+                  </div>
+                  <textarea className="w-full bg-dark rounded-xl overflow-hidden px-4 py-3" />
+
+                  <Button lang={lang} font={font} theme="dark" className="w-full">
+                    {"Submit"}
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
 
           <Footer lang={lang} font={font} theme={theme} />
-        </div>
-      </div>
+        </div >
+      </div >
     );
   } else {
     return (
